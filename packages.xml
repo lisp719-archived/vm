@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<packages>
+  <package id="cmder" />
+  <package id="curl" />
+  <package id="google-chrome-x64" />
+  <package id="vagrant" />
+  <package id="virtualbox" />
+  <package id="visualstudiocode" />
+</packages>
