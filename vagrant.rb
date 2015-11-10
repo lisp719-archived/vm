@@ -1,6 +1,3 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 Vagrant.configure(2) do |config|
   config.vm.box = "ogarcia/archlinux-201510-x64"
   config.vm.network "forwarded_port", guest: 3449, host: 3449
