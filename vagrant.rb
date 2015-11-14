@@ -40,6 +40,7 @@ echo prefix=~/.npm > .npmrc
 
     git config --global user.name lisp719
     git config --global user.email test@example.com
+    git config --global push.default simple
 
     gem i thor pry bundler
     npm i browser-sync -g
