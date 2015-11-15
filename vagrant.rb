@@ -8,6 +8,11 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", privileged: false, inline: '
+    sudo pacman -Syu
+    sudo pacman -S --noconfirm tmux git ruby nodejs npm curl \
+      jdk8-openjdk mongodb postgresql sqlite mariadb unzip python2 \
+      php apache nginx tree tig
+
 cat << EOF >> .bash_profile
 PATH=$HOME/bin:\$PATH
 PATH=$HOME/bin/cli:\$PATH
@@ -30,17 +35,9 @@ update: -N
 EOF
 
 echo prefix=~/.npm > .npmrc
-  '
-
-  config.vm.provision "shell", privileged: false, inline: '
-    sudo pacman -Syu
-    sudo pacman -S --noconfirm tmux git ruby nodejs npm curl \
-      jdk8-openjdk mongodb postgresql sqlite mariadb unzip python2 \
-      php apache nginx tree tig
 
     git config --global user.name lisp719
     git config --global user.email test@example.com
-    git config --global push.default simple
 
     gem i thor pry bundler
     npm i browser-sync -g
