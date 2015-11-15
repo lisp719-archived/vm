@@ -8,12 +8,14 @@ Vagrant.configure(2) do |config|
     vb.memory = "1024"
   end
 
-  config.vm.provision "shell", privileged: false, inline: '
+  pacman_script = '
     sudo pacman -Syu
     sudo pacman -S --noconfirm tmux git ruby nodejs npm curl \
       jdk8-openjdk mongodb postgresql sqlite mariadb unzip python2 \
       php apache nginx tree tig
+  '
 
+  config_script = '
 cat << EOF >> .bash_profile
 PATH=$HOME/bin:\$PATH
 PATH=$HOME/bin/cli:\$PATH
@@ -36,7 +38,9 @@ update: -N
 EOF
 
 echo prefix=~/.npm > .npmrc
+  '
 
+  cli_script = '
     git config --global user.name lisp719
     git config --global user.email test@example.com
     git config --global push.default simple
@@ -46,20 +50,30 @@ echo prefix=~/.npm > .npmrc
 
     mkdir bin
     git clone https://github.com/lisp719/cli.git ~/bin/cli
+  '
 
+  lein_script = '
     curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ~/bin/lein
     chmod a+x ~/bin/lein
     ~/bin/lein
-    
+  '
+
+  db_script = '
     sudo su -c "initdb --locale en_US.UTF-8 -E UTF8 -D \'/var/lib/postgres/data\'" postgres
     sudo systemctl start postgresql.service
     sudo systemctl enable postgresql.service
-    
+
     sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
     sudo systemctl start mysqld.service
     sudo systemctl enable mysqld.service
-    
+
     sudo systemctl start mongodb.service
     sudo systemctl enable mongodb.service
   '
+
+  config.vm.provision "shell", privileged: false, inline: pacman_script
+  config.vm.provision "shell", privileged: false, inline: config_script
+  config.vm.provision "shell", privileged: false, inline: cli_script
+  config.vm.provision "shell", privileged: false, inline: lein_script
+  config.vm.provision "shell", privileged: false, inline: db_script
 end
