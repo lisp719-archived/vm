@@ -46,7 +46,6 @@ echo prefix=~/.npm > .npmrc
     git config --global push.default simple
 
     gem i thor pry bundler
-    npm i browser-sync -g
 
     mkdir bin
     git clone https://github.com/lisp719/cli.git ~/bin/cli
