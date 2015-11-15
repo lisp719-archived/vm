@@ -52,5 +52,7 @@ echo prefix=~/.npm > .npmrc
     ~/bin/lein
     
     sudo su -c "initdb --locale en_US.UTF-8 -E UTF8 -D \'/var/lib/postgres/data\'" postgres
+    sudo systemctl start postgresql.service
+    sudo systemctl enable postgresql.service
   '
 end
