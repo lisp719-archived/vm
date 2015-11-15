@@ -50,5 +50,7 @@ echo prefix=~/.npm > .npmrc
     curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ~/bin/lein
     chmod a+x ~/bin/lein
     ~/bin/lein
+    
+    sudo su -c "initdb --locale en_US.UTF-8 -E UTF8 -D \'/var/lib/postgres/data\'" postgres
   '
 end
