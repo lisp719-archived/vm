@@ -69,15 +69,6 @@ echo prefix=~/.npm > .npmrc
     sudo systemctl start mongodb.service
     sudo systemctl enable mongodb.service
   '
-  
-  composer_script = '
-    sudo cat << EOF > /etc/php/php.ini
-      extension=phar.so
-      extension=openssl.so
-    EOF
-    curl -sS https://getcomposer.org/installer | php
-    mv composer.phar ~/bin/composer
-  '
 
   config.vm.provision "shell", privileged: false, inline: pacman_script
   config.vm.provision "shell", privileged: false, inline: config_script
