@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
     sudo pacman -Syu
     sudo pacman -S --noconfirm tmux git ruby nodejs npm curl \
       jdk8-openjdk mongodb postgresql sqlite mariadb unzip \
-      php apache nginx tree tig
+      php tree tig
   '
 
   config_script = '
