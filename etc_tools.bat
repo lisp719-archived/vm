@@ -3,3 +3,5 @@ curl -L http://download.sysinternals.com/files/Ctrl2Cap.zip -o Ctrl2Cap.zip
 
 powershell expand-archive clibor.zip
 powershell expand-archive Ctrl2Cap.zip
+
+move clibor\clibor c:\sandbox
