@@ -71,10 +71,16 @@ echo prefix=~/.npm > .npmrc
     sudo systemctl start mongodb.service
     sudo systemctl enable mongodb.service
   '
+  
+  emacs_script = '
+    mkdir ~/.emacs.d
+    curl curl https://raw.githubusercontent.com/lisp719/conf/master/init.el -o .emacs.d/init.el
+  '
 
   config.vm.provision "shell", privileged: false, inline: pacman_script
   config.vm.provision "shell", privileged: false, inline: config_script
   config.vm.provision "shell", privileged: false, inline: cli_script
   config.vm.provision "shell", privileged: false, inline: lein_script
   config.vm.provision "shell", privileged: false, inline: db_script
+  config.vm.provision "shell", privileged: false, inline: emacs_script
 end
