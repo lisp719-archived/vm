@@ -7,3 +7,5 @@
 (unless (package-installed-p 'inf-clojure)
   (package-refresh-contents)
   (package-install 'inf-clojure))
+
+(add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
