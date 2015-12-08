@@ -13,3 +13,6 @@
   (run-clojure "lein figwheel"))
 
 (add-hook 'clojure-mode-hook #'inf-clojure-minor-mode)
+
+(setq make-backup-files nil)
+(setq auto-save-default nil)
