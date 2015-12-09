@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
 
     curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.gemrc -o ~/.gemrc
 
-echo prefix=~/.npm > .npmrc
+    curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.npmrc -o ~/.npmrc
   '
 
   cli_script = '
