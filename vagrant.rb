@@ -59,7 +59,7 @@ Vagrant.configure(2) do |config|
   emacs_script = '
     git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
     echo >> ~/.emacs.d/init.el
-    curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.add_init.el -o ~/.emacs.d/.init.el
+    curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/add_init.el >> ~/.emacs.d/init.el
   '
 
   config.vm.provision "shell", privileged: false, inline: pacman_script
