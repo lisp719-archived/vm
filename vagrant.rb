@@ -23,16 +23,7 @@ PATH=$(ruby -e \'print Gem.user_dir\')/bin:\$PATH
 PATH=$HOME/.npm/bin:\$PATH
 EOF
 
-cat << EOF > .tmux.conf
-unbind C-b
-set -g prefix C-t
-setw -g mode-keys vi
-bind-key c new-window -c "#{pane_current_path}"
-bind-key % split-window -h -c "#{pane_current_path}"
-bind-key \'"\' split-window -v -c "#{pane_current_path}"
-set -g base-index 1
-set -g pane-base-index 1
-EOF
+curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
 
 cat << EOF > .gemrc
 install: -N
