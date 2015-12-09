@@ -71,9 +71,9 @@ echo prefix=~/.npm > .npmrc
     sudo systemctl start mongodb.service
     sudo systemctl enable mongodb.service
   '
-  
+
   emacs_script = '
-    mkdir ~/.emacs.d
+    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
     curl curl https://raw.githubusercontent.com/lisp719/conf/master/init.el -o .emacs.d/init.el
   '
 
