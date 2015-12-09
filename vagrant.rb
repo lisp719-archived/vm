@@ -21,10 +21,7 @@ Vagrant.configure(2) do |config|
 
     curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
 
-cat << EOF > .gemrc
-install: -N
-update: -N
-EOF
+    curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.gemrc -o ~/.gemrc
 
 echo prefix=~/.npm > .npmrc
   '
