@@ -16,12 +16,8 @@ Vagrant.configure(2) do |config|
   '
 
   config_script = '
-cat << EOF >> .bash_profile
-PATH=$HOME/bin:\$PATH
-PATH=$HOME/bin/cli:\$PATH
-PATH=$(ruby -e \'print Gem.user_dir\')/bin:\$PATH
-PATH=$HOME/.npm/bin:\$PATH
-EOF
+echo >> ~/.bash_profile
+curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/add_bash_profile >> ~/.bash_profile
 
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
 
