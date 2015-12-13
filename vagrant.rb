@@ -18,11 +18,8 @@ Vagrant.configure(2) do |config|
   config_script = '
     echo >> ~/.bash_profile
     curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/add_bash_profile >> ~/.bash_profile
-
     curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
-
     curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.gemrc -o ~/.gemrc
-
     curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.npmrc -o ~/.npmrc
   '
 
