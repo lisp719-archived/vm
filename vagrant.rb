@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   end
 
   pacman_script = '
-    sudo pacman -Syu
+    sudo pacman -Syu --noconfirm
     sudo pacman -S --noconfirm tmux git ruby nodejs npm curl \
       jdk8-openjdk mongodb postgresql sqlite mariadb unzip \
       php tree tig emacs
