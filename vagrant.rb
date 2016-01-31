@@ -56,6 +56,7 @@ Vagrant.configure(2) do |config|
   emacs_script = '
     git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
     curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.spacemacs -o ~.spacemacs
+    emacs --daemon
   '
 
   config.vm.provision "shell", privileged: false, inline: pacman_script
