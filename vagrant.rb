@@ -10,7 +10,6 @@ Vagrant.configure(2) do |config|
 
   pacman_script = '
     sudo pacman -S --noconfirm   ruby nodejs npm  \
-      jdk8-openjdk  \
       php
   '
 
@@ -28,15 +27,10 @@ Vagrant.configure(2) do |config|
     git clone https://github.com/lisp719/cli.git ~/bin/cli
   '
 
-  lein_script = '
-    curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ~/bin/lein
-    chmod a+x ~/bin/lein
-    ~/bin/lein
-  '
-
 
 
   config.vm.provision "shell", privileged: false, path: "script/base.sh"
   config.vm.provision "shell", privileged: false, path: "script/db.sh"
+  config.vm.provision "shell", privileged: false, path: "script/lein.sh"
   config.vm.provision "shell", privileged: false, path: "script/emacs.sh"
 end
