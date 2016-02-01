@@ -4,6 +4,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
   curl \
   git \
+  nodejs \
   tig \
   tmux \
   tree \

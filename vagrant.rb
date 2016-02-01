@@ -9,8 +9,7 @@ Vagrant.configure(2) do |config|
   end
 
   pacman_script = '
-    sudo pacman -S --noconfirm   ruby nodejs npm  \
-      php
+    sudo pacman -S --noconfirm   ruby 
   '
 
   config_script = '
