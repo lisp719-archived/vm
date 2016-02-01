@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
 
   pacman_script = '
     sudo pacman -S --noconfirm   ruby nodejs npm  \
-      jdk8-openjdk mongodb postgresql sqlite mariadb  \
+      jdk8-openjdk  \
       php
   '
 
@@ -35,21 +35,10 @@ Vagrant.configure(2) do |config|
     ~/bin/lein
   '
 
-  db_script = '
-    sudo su -c "initdb --locale en_US.UTF-8 -E UTF8 -D \'/var/lib/postgres/data\'" postgres
-    sudo systemctl start postgresql.service
-    sudo systemctl enable postgresql.service
-
-    sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-    sudo systemctl start mysqld.service
-    sudo systemctl enable mysqld.service
-
-    sudo systemctl start mongodb.service
-    sudo systemctl enable mongodb.service
-  '
 
 
   config.vm.provision "shell", privileged: false, path: "script/base.sh"
+  config.vm.provision "shell", privileged: false, path: "script/db.sh"
   config.vm.provision "shell", privileged: false, path: "script/emacs.sh"
   config.vm.provision "shell", privileged: false, inline: config_script
   config.vm.provision "shell", privileged: false, inline: cli_script
