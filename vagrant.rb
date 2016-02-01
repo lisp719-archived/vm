@@ -25,7 +25,6 @@ Vagrant.configure(2) do |config|
   cli_script = '
     gem i thor pry bundler
 
-    mkdir bin
     git clone https://github.com/lisp719/cli.git ~/bin/cli
   '
 
