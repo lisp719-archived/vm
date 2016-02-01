@@ -40,8 +40,4 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", privileged: false, path: "script/base.sh"
   config.vm.provision "shell", privileged: false, path: "script/db.sh"
   config.vm.provision "shell", privileged: false, path: "script/emacs.sh"
-  config.vm.provision "shell", privileged: false, inline: config_script
-  config.vm.provision "shell", privileged: false, inline: cli_script
-  config.vm.provision "shell", privileged: false, inline: lein_script
-  config.vm.provision "shell", privileged: false, inline: db_script
 end
