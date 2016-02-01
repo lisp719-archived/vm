@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
   pacman_script = '
     sudo pacman -S --noconfirm   ruby nodejs npm  \
       jdk8-openjdk mongodb postgresql sqlite mariadb  \
-      php   emacs
+      php
   '
 
   config_script = '
@@ -48,16 +48,11 @@ Vagrant.configure(2) do |config|
     sudo systemctl enable mongodb.service
   '
 
-  emacs_script = '
-    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-    curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.spacemacs -o ~/.spacemacs
-    emacs --daemon
-  '
 
   config.vm.provision "shell", privileged: false, path: "script/base.sh"
+  config.vm.provision "shell", privileged: false, path: "script/emacs.sh"
   config.vm.provision "shell", privileged: false, inline: config_script
   config.vm.provision "shell", privileged: false, inline: cli_script
   config.vm.provision "shell", privileged: false, inline: lein_script
   config.vm.provision "shell", privileged: false, inline: db_script
-  config.vm.provision "shell", privileged: false, inline: emacs_script
 end
