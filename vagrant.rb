@@ -9,10 +9,9 @@ Vagrant.configure(2) do |config|
   end
 
   pacman_script = '
-    sudo pacman -Syu --noconfirm
-    sudo pacman -S --noconfirm tmux git ruby nodejs npm curl \
-      jdk8-openjdk mongodb postgresql sqlite mariadb unzip \
-      php tree tig emacs
+    sudo pacman -S --noconfirm   ruby nodejs npm  \
+      jdk8-openjdk mongodb postgresql sqlite mariadb  \
+      php   emacs
   '
 
   config_script = '
@@ -59,7 +58,7 @@ Vagrant.configure(2) do |config|
     emacs --daemon
   '
 
-  config.vm.provision "shell", privileged: false, inline: pacman_script
+  config.vm.provision "shell", privileged: false, path: "script/base.sh"
   config.vm.provision "shell", privileged: false, inline: config_script
   config.vm.provision "shell", privileged: false, inline: cli_script
   config.vm.provision "shell", privileged: false, inline: lein_script
