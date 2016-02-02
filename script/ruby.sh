@@ -8,6 +8,7 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 source ~/.bash_profile
 rbenv install 2.2.4
+rbenv global 2.2.4
 
 echo install: -N >> .gemrc
 echo update: -N >> .gemrc
