@@ -1,6 +1,5 @@
 #! /bin/sh
 
-
 sudo sed -i -e "1i Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/\$repo/os/\$arch" /etc/pacman.d/mirrorlist
 sudo sed -i -e "2i Server = ftp://ftp.jaist.ac.jp/pub/Linux/ArchLinux/core/os/\$arch" /etc/pacman.d/mirrorlist
 
