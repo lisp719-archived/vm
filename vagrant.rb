@@ -8,22 +8,6 @@ Vagrant.configure(2) do |config|
     vb.memory = "1024"
   end
 
-  pacman_script = '
-    sudo pacman -S --noconfirm   ruby
-  '
-
-  config_script = '
-    curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.gemrc -o ~/.gemrc
-  '
-
-  cli_script = '
-    gem i thor pry bundler
-
-    git clone https://github.com/lisp719/cli.git ~/bin/cli
-  '
-
-
-
   config.vm.provision "shell", privileged: false, path: "script/base.sh"
   config.vm.provision "shell", privileged: false, path: "script/ruby.sh"
   config.vm.provision "shell", privileged: false, path: "script/db.sh"
