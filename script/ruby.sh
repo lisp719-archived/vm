@@ -6,6 +6,7 @@ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
+source ~/.bash_profile
 rbenv install 2.2.4
 
 echo install: -N >> .gemrc
