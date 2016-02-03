@@ -16,6 +16,7 @@ sudo pacman -S --noconfirm \
 git config --global user.name lisp719
 git config --global user.email test@example.com
 git config --global push.default simple
+git config --global core.editor nano
 
 mkdir ~/bin
 
