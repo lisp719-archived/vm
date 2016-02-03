@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", privileged: false, path: "script/base.sh"
-  config.vm.provision "shell", privileged: false, path: "script/ruby.sh"
+  config.vm.provision "shell", privileged: false, path: "script/rbenv.sh"
   config.vm.provision "shell", privileged: false, path: "script/db.sh"
   config.vm.provision "shell", privileged: false, path: "script/lein.sh"
   config.vm.provision "shell", privileged: false, path: "script/go.sh"
