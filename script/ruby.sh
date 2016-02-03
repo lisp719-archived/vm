@@ -15,8 +15,6 @@ echo update: -N >> .gemrc
 
 gem i \
   bundler \
-  pry \
-  rails \
   thor
 
 git clone https://github.com/lisp719/cli.git ~/bin/cli
