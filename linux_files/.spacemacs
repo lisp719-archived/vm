@@ -211,7 +211,6 @@ layers configuration. You are free to put any user code."
 
   (global-company-mode)
   (global-git-gutter-mode t)
-  (global-whitespace-mode t)
 
   (indent-guide-global-mode 1)
 
