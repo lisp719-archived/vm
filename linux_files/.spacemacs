@@ -28,7 +28,7 @@ values."
      emacs-lisp
      git
      go
-     javascript
+     html
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -205,7 +205,20 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+  (global-company-mode)
   (global-git-gutter-mode t)
+  (global-whitespace-mode t)
+
+  (indent-guide-global-mode 1)
+
+  (setq-default
+   css-indent-offset 2
+   js2-basic-offset 2
+   js-indent-level 2
+   web-mode-markup-indent-offset 2
+   )
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
