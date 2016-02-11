@@ -29,6 +29,8 @@ values."
      git
      go
      html
+     ruby
+     ruby-on-rails
      ;; markdown
      ;; org
      ;; (shell :variables
