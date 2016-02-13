@@ -23,6 +23,7 @@ mkdir ~/bin
 echo >> ~/.bash_profile
 echo 'PATH=$HOME/bin:$PATH' >> ~/.bash_profile
 echo 'PATH=$HOME/bin/cli:$PATH' >> ~/.bash_profile
+echo tmux >> ~/.bash_profile
 
 git clone https://github.com/lisp719/cli.git ~/bin/cli
 
