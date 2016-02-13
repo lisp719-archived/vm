@@ -15,4 +15,4 @@ go get -u -v golang.org/x/tools/cmd/gorename
 
 go get github.com/peco/peco/cmd/peco
 
-echo 'cdp() { cd `find $1 -type d | peco`; }' >> ~/.bash_profile
+echo 'cdp() { cd $(find $1 -type d | peco); }' >> ~/.bash_profile
