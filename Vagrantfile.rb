@@ -14,5 +14,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", privileged: false, path: "script/db.sh"
   config.vm.provision "shell", privileged: false, path: "script/lein.sh"
   config.vm.provision "shell", privileged: false, path: "script/go.sh"
+  config.vm.provision "shell", privileged: false, path: "script/docker.sh"
   config.vm.provision "shell", privileged: false, path: "script/emacs.sh"
 end
