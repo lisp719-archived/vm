@@ -16,4 +16,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", privileged: false, path: "script/go.sh"
   config.vm.provision "shell", privileged: false, path: "script/docker.sh"
   config.vm.provision "shell", privileged: false, path: "script/emacs.sh"
+
+  config.vm.provision "shell", privileged: false, inline: "sudo reboot"
 end
