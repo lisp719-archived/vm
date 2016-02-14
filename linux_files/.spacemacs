@@ -218,7 +218,8 @@ layers configuration. You are free to put any user code."
    css-indent-offset 2
    js2-basic-offset 2
    js-indent-level 2
-   web-mode-markup-indent-offset 2)
+   web-mode-markup-indent-offset 2
+   x-select-enable-clipboard t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
