@@ -205,10 +205,7 @@ user code."
 layers configuration. You are free to put any user code."
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-  (global-company-mode)
   (global-git-gutter-mode t)
-
-  (indent-guide-global-mode 1)
 
   (setq-default
    x-select-enable-clipboard t)
