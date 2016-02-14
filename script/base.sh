@@ -28,4 +28,4 @@ echo '. ~/.bashconf' >> ~/.bash_profile
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.bashconf -o ~/.bashconf
 
-source ~/.bashconf
+source ~/.bash_profile
