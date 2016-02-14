@@ -19,11 +19,12 @@ git config --global push.default simple
 git config --global core.editor nano
 
 mkdir ~/bin
-
-echo >> ~/.bash_profile
-echo 'PATH=$HOME/bin:$PATH' >> ~/.bash_profile
-echo 'PATH=$HOME/bin/cli:$PATH' >> ~/.bash_profile
-
 git clone https://github.com/lisp719/cli.git ~/bin/cli
 
+echo >> ~/.bash_profile
+echo '. ~/.bashconf' >> ~/.bash_profile
+
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
+curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.bashconf -o ~/.bashconf
+
+source ~/.bashconf
