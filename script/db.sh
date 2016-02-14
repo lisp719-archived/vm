@@ -6,7 +6,7 @@ sudo pacman -S --noconfirm \
   postgresql \
   sqlite
 
-sudo su -c "initdb --locale en_US.UTF-8 -E UTF8 -D \'/var/lib/postgres/data\'" postgres
+sudo su -c "initdb --locale en_US.UTF-8 -E UTF8 -D '/var/lib/postgres/data'" postgres
 sudo systemctl start postgresql.service
 sudo systemctl enable postgresql.service
 
