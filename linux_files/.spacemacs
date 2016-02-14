@@ -27,10 +27,6 @@ values."
      ;; better-defaults
      emacs-lisp
      git
-     go
-     html
-     ruby
-     ruby-on-rails
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -215,11 +211,6 @@ layers configuration. You are free to put any user code."
   (indent-guide-global-mode 1)
 
   (setq-default
-   css-indent-offset 2
-   js2-basic-offset 2
-   js-indent-level 2
-   ruby-insert-encoding-magic-comment nil
-   web-mode-markup-indent-offset 2
    x-select-enable-clipboard t)
 )
 
