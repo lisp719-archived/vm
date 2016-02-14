@@ -6,6 +6,7 @@ sudo sed -i -e "2i Server = ftp://ftp.jaist.ac.jp/pub/Linux/ArchLinux/core/os/\$
 sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm \
   curl \
+  fzf \
   git \
   nodejs \
   tig \
