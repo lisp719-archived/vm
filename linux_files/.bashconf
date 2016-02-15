@@ -9,4 +9,4 @@ export PATH=$PATH:~/go/bin
 
 export TERM=xterm-256color
 
-pcd() { cd $(find . -type d | fzf); }
+fcd() { cd $(find . -type d | fzf); }
