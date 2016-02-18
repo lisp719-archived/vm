@@ -17,6 +17,4 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", privileged: false, path: "script/go.sh"
   config.vm.provision "shell", privileged: false, path: "script/lein.sh"
   config.vm.provision "shell", privileged: false, path: "script/rbenv.sh"
-
-  config.vm.provision "shell", privileged: false, inline: "sudo reboot"
 end
