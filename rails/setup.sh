@@ -1,18 +1,20 @@
 #! /bin/sh
 
-sudo sed -i -e "1i Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/\$repo/os/\$arch" /etc/pacman.d/mirrorlist
-sudo sed -i -e "2i Server = ftp://ftp.jaist.ac.jp/pub/Linux/ArchLinux/core/os/\$arch" /etc/pacman.d/mirrorlist
-
-sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm \
+sudo apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
   curl \
-  fzf \
   git \
+  libreadline-dev \
+  libsqlite3-dev \
+  libmysqlclient-dev \
+  libssl-dev \
+  mysql-server \
   nodejs \
+  sqlite \
   tig \
-  tmux \
   tree \
-  unzip
+  unzip \
+  zlib1g-dev
 
 git config --global user.name lisp719
 git config --global user.email test@example.com
@@ -30,16 +32,10 @@ curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.bashconf
 
 source ~/.bash_profile
 
-sudo pacman -S --noconfirm \
-  mariadb \
-  sqlite
-
-sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-sudo systemctl start mysqld.service
-sudo systemctl enable mysqld.service
-
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 echo install: -N >> .gemrc
 echo update: -N >> .gemrc
+
+mkdir sandbox
