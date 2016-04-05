@@ -17,8 +17,8 @@ git config --global core.editor nano
 mkdir ~/bin
 git clone https://github.com/lisp719/cli.git ~/bin/cli
 
-echo >> ~/.bashrc
 echo >> ~/.bash_profile
+echo '. ~/.bashrc' >> ~/.bash_profile
 echo '. ~/.bashconf' >> ~/.bash_profile
 
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
