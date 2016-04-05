@@ -1,20 +1,14 @@
 #! /bin/sh
 
-sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  curl \
-  git \
-  libreadline-dev \
-  libsqlite3-dev \
-  libmysqlclient-dev \
-  libssl-dev \
-  mysql-server \
+sudo sed -i -e "1i Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/\$repo/os/\$arch" /etc/pacman.d/mirrorlist
+sudo sed -i -e "2i Server = ftp://ftp.jaist.ac.jp/pub/Linux/ArchLinux/core/os/\$arch" /etc/pacman.d/mirrorlist
+
+sudo pacman -Syyu --noconfirm
+sudo pacman -S --noconfirm \
+  fzf \
+  mariadb \
   nodejs \
-  sqlite \
-  tig \
-  tree \
-  unzip \
-  zlib1g-dev
+  unzip
 
 git config --global user.name lisp719
 git config --global user.email test@example.com
@@ -39,3 +33,10 @@ echo install: -N >> .gemrc
 echo update: -N >> .gemrc
 
 mkdir sandbox
+
+sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo systemctl start mysqld.service
+sudo systemctl enable mysqld.service
+
+# curl -fsSL https://gist.github.com/mislav/055441129184a1512bb5.txt | rbenv install --patch 2.1.5
+# rbenv global 2.1.5
