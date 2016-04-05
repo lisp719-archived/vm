@@ -5,13 +5,8 @@ sudo sed -i -e "2i Server = ftp://ftp.jaist.ac.jp/pub/Linux/ArchLinux/core/os/\$
 
 sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm \
-  curl \
   fzf \
-  git \
   nodejs \
-  tig \
-  tmux \
-  tree \
   unzip
 
 git config --global user.name lisp719
@@ -22,6 +17,7 @@ git config --global core.editor nano
 mkdir ~/bin
 git clone https://github.com/lisp719/cli.git ~/bin/cli
 
+echo >> ~/.bashrc
 echo >> ~/.bash_profile
 echo '. ~/.bashconf' >> ~/.bash_profile
 
