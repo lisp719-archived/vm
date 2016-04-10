@@ -13,6 +13,8 @@ git config --global user.name lisp719
 git config --global user.email test@example.com
 git config --global push.default simple
 git config --global core.editor nano
+git config --global core.excludesfile ~/.gitignore
+touch ~/.gitignore
 
 mkdir ~/bin
 git clone https://github.com/lisp719/cli.git ~/bin/cli
