@@ -27,6 +27,8 @@ values."
      ;; better-defaults
      emacs-lisp
      git
+     html
+     javascript
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -206,8 +208,11 @@ layers configuration. You are free to put any user code."
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
   (global-git-gutter-mode t)
+  (global-evil-mc-mode 1)
 
   (setq-default
+   js2-basic-offset 2
+   web-mode-markup-indent-offset 2
    x-select-enable-clipboard t)
 )
 
