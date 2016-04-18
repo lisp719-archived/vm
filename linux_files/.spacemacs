@@ -210,6 +210,8 @@ layers configuration. You are free to put any user code."
   (global-git-gutter-mode t)
   (global-evil-mc-mode 1)
 
+  (setq ruby-insert-encoding-magic-comment nil)
+
   (setq-default
    js2-basic-offset 2
    web-mode-markup-indent-offset 2
