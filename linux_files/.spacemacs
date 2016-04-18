@@ -207,6 +207,7 @@ user code."
 layers configuration. You are free to put any user code."
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+  (global-company-mode t)
   (global-git-gutter-mode t)
   (global-evil-mc-mode 1)
 
