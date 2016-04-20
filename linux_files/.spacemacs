@@ -29,6 +29,9 @@ values."
      git
      html
      javascript
+     ruby
+     ruby-on-rails
+     yaml
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -42,7 +45,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(inf-clojure git-gutter)
+   dotspacemacs-additional-packages '(inf-clojure git-gutter+)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -80,12 +83,12 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(monokai
+                         spacemacs-dark
                          spacemacs-light
                          solarized-light
                          solarized-dark
                          leuven
-                         monokai
                          zenburn)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -208,15 +211,16 @@ layers configuration. You are free to put any user code."
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
   (global-company-mode t)
-  (global-git-gutter-mode t)
   (global-evil-mc-mode 1)
+  (global-git-gutter+-mode)
 
-  (setq ruby-insert-encoding-magic-comment nil)
+  (setq
+   ruby-insert-encoding-magic-comment nil
+   x-select-enable-clipboard t)
 
   (setq-default
    js2-basic-offset 2
-   web-mode-markup-indent-offset 2
-   x-select-enable-clipboard t)
+   web-mode-markup-indent-offset 2)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
