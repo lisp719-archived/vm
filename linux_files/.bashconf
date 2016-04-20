@@ -7,5 +7,5 @@ eval "$(rbenv init -)"
 export GOPATH=~/go
 export PATH=$PATH:~/go/bin
 
-cdf() { cd $(find . -type d | fzf); }
+cdf() { cd $(find . -maxdepth 3 -type d | fzf); }
 killf() { kill -9 `ps aux | fzf | awk '{print $2}'`; }
