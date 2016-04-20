@@ -9,6 +9,8 @@ sudo pacman -S --noconfirm \
   nodejs \
   unzip
 
+sudo timedatectl set-timezone Asia/Tokyo
+
 git config --global user.name lisp719
 git config --global user.email test@example.com
 git config --global push.default simple
