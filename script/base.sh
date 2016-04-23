@@ -1,13 +1,15 @@
 #! /bin/sh
 
-sudo sed -i -e "1i Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/\$repo/os/\$arch" /etc/pacman.d/mirrorlist
-sudo sed -i -e "2i Server = ftp://ftp.jaist.ac.jp/pub/Linux/ArchLinux/core/os/\$arch" /etc/pacman.d/mirrorlist
+sudo sed -i.bak -e "s%http://us.archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
 
-sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm \
-  fzf \
-  nodejs \
-  unzip
+sudo apt-get update
+sudo apt-get install -y \
+  git \
+  nodejs
+
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 sudo timedatectl set-timezone Asia/Tokyo
 
@@ -21,11 +23,8 @@ touch ~/.gitignore
 mkdir ~/bin
 git clone https://github.com/lisp719/cli.git ~/bin/cli
 
-echo >> ~/.bash_profile
-echo '. ~/.bashrc' >> ~/.bash_profile
-echo '. ~/.bashconf' >> ~/.bash_profile
-
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.bashconf -o ~/.bashconf
 
-source ~/.bash_profile
+echo >> ~/.profile
+echo '. ~/.bashconf' >> ~/.profile
