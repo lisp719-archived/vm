@@ -2,7 +2,6 @@
 
 sudo pacman -S --noconfirm \
   mariadb \
-  mongodb \
   postgresql \
   sqlite
 
@@ -13,6 +12,3 @@ sudo systemctl enable postgresql.service
 sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 sudo systemctl start mysqld.service
 sudo systemctl enable mysqld.service
-
-sudo systemctl start mongodb.service
-sudo systemctl enable mongodb.service
