@@ -1,6 +1,7 @@
 {
   "editor.tabSize": 2,
   "editor.renderWhitespace": true,
+  "files.eol": "\n",
   "files.trimTrailingWhitespace": true,
   "editor.insertSpaces": true,
   "editor.wrappingColumn": 0
