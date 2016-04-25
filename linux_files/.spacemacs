@@ -210,17 +210,26 @@ user code."
 layers configuration. You are free to put any user code."
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+  (evil-leader/set-key "SPC" 'avy-goto-char)
+
   (global-company-mode t)
   (global-evil-mc-mode 1)
   (global-git-gutter+-mode)
+
+  (global-set-key "\C-h" 'delete-backward-char)
 
   (setq
    ruby-insert-encoding-magic-comment nil
    x-select-enable-clipboard t)
 
   (setq-default
+   css-indent-offset 2
    js2-basic-offset 2
-   web-mode-markup-indent-offset 2)
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-style-padding 2
+   web-mode-script-padding 2)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
