@@ -26,5 +26,5 @@ git clone https://github.com/lisp719/cli.git ~/bin/cli
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.tmux.conf -o ~/.tmux.conf
 curl https://raw.githubusercontent.com/lisp719/conf/master/linux_files/.bashconf -o ~/.bashconf
 
-echo >> ~/.profile
-echo '. ~/.bashconf' >> ~/.profile
+echo >> ~/.bashrc
+echo '. ~/.bashconf' >> ~/.bashrc
