@@ -1,0 +1,18 @@
+"*":
+  core:
+    disabledPackages: [
+      "goto"
+    ]
+  editor:
+    fontSize: 12
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "676bc3dc-6cfb-abbc-50c3-35095616100b"
+  "git-blame": {}
+  jumpy: {}
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  welcome:
+    showOnStartup: false
