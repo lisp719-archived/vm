@@ -1,14 +1,13 @@
 #! /bin/sh
 
-sudo pacman -S --noconfirm \
-  mariadb \
-  postgresql \
-  sqlite
+echo "mysql-server-5.6 mysql-server/root_password password root" | sudo debconf-set-selections
+echo "mysql-server-5.6 mysql-server/root_password_again password root" | sudo debconf-set-selections
 
-sudo su -c "initdb --locale en_US.UTF-8 -E UTF8 -D '/var/lib/postgres/data'" postgres
-sudo systemctl start postgresql.service
-sudo systemctl enable postgresql.service
+sudo apt-get install -y \
+  libpq-dev \
+  libmysqlclient-dev \
+  libsqlite3-dev \
+  mysql-server-5.6 \
+  postgresql
 
-sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-sudo systemctl start mysqld.service
-sudo systemctl enable mysqld.service
+sudo su -c "createuser -s vagrant" postgres
