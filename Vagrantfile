@@ -9,6 +9,7 @@ Vagrant.configure(2) do |config|
   config.ssh.forward_x11 = true
 
   config.vm.synced_folder '../sync', '/vagrant'
+  config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = 512 * 2
