@@ -1,11 +1,13 @@
 #! /bin/sh
 
 sudo apt-get install -y \
+  fcitx-mozc \
   gvfs-bin \
-  ibus-mozc \
   libnss3 \
-  lxde \
   ttf-mona
+
+sudo apt-get install -y \
+  lxde \
 
 wget https://github.com/atom/atom/releases/download/v1.7.2/atom-amd64.deb
 
