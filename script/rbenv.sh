@@ -17,3 +17,4 @@ echo update: -N >> .gemrc
 
 # CONFIGURE_OPTS="--disable-install-rdoc" rbenv install 2.1.5
 # rbenv global 2.1.5
+# gem i bundler
