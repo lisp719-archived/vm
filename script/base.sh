@@ -10,9 +10,6 @@ sudo apt-get install -y \
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-cp /vagrant/.ssh/* ~/.ssh/
-chmod 600 ~/.ssh/id_rsa
-
 sudo timedatectl set-timezone Asia/Tokyo
 
 git config --global user.name lisp719
