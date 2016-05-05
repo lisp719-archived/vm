@@ -1,22 +1,13 @@
 #! /bin/sh
 
 sudo apt-get install -y \
+  emacs-mozc \
   fcitx-mozc \
-  gvfs-bin \
-  libnss3 \
-  ttf-mona
-
-sudo apt-get install -y \
   lxde \
+  ttf-mona
 
 mkdir -p ~/.config/fcitx
 cp ~/linux_files/fcitx.profile ~/.config/fcitx/profile
 
-wget https://github.com/atom/atom/releases/download/v1.7.2/atom-amd64.deb
-
-sudo dpkg -i atom-amd64.deb
-
-cd ~/linux_files/atom
-./import.sh
-cp ./config.cson ~/.atom/
-cp ./keymap.cson ~/.atom/
+wget https://download.sublimetext.com/sublime-text_build-3103_amd64.deb
+sudo dpkg -i sublime-text_build-3103_amd64.deb
