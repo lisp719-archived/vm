@@ -1,2 +1,0 @@
-'atom-text-editor':
-  'ctrl-;': 'easy-motion-redux:letter'
