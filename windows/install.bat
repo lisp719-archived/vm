@@ -1,1 +1,0 @@
-cinst packages.config -y
