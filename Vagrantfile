@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = 512 * 2
+    vb.memory = 512 * 4
     vb.gui = true
   end
 
