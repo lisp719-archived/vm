@@ -3,8 +3,10 @@
 sudo apt-get install -y \
   emacs-mozc \
   fcitx-mozc \
-  lxde \
   ttf-mona
+
+sudo apt-get install -y \
+  lxde \
 
 mkdir -p ~/.config/fcitx
 cp ~/linux_files/fcitx.profile ~/.config/fcitx/profile
