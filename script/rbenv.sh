@@ -1,4 +1,4 @@
-#! /bin/sh
+# ! /bin/sh
 
 sudo apt-get install -y \
   build-essential \
@@ -9,6 +9,10 @@ sudo apt-get install -y \
 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+echo >> .bashconf
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> .bashconf
+echo 'eval "$(rbenv init -)"' >> .bashconf
 
 . ~/.bashconf
 
