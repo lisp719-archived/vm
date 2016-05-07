@@ -19,3 +19,5 @@ wget https://packagecontrol.io/Package%20Control.sublime-package -P ~/.config/su
 
 mkdir -p ~/.config/sublime-text-3/Packages/User/
 cp ~/linux_files/subl/* ~/.config/sublime-text-3/Packages/User/
+
+git config  --global  core.editor "subl -w"
