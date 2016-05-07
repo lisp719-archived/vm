@@ -1,0 +1,27 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Abacus",
+		"AceJump",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"ExportHtml",
+		"FindKeyConflicts",
+		"Git",
+		"GitGutter",
+		"Package Control",
+		"Rails Developer Snippets",
+		"ReactJS",
+		"RubyTest",
+		"SCSS",
+		"SublimeMozcInput"
+	],
+	"repositories":
+	[
+		"https://github.com/yasuyuky/SublimeMozcInput"
+	]
+}

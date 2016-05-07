@@ -1,0 +1,47 @@
+{
+	"build_env":
+	{
+	},
+	"draw_white_space": "all",
+	"enable_tab_scrolling": false,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".gitkeep",
+		".DS_Store",
+		"*.cache",
+		"*.log",
+		"*.pyc",
+		"*.sqlite3"
+	],
+	"folder_exclude_patterns":
+	[
+		".bower-cache",
+		".git",
+		".sass-cache",
+		".tmp",
+		".vagrant",
+		"bower_components",
+		"cookbooks",
+		"js/compiled",
+		"libmecab-ruby",
+		"node_modules",
+		"tmp",
+		"vendor/bundle",
+		"vendor/plugins"
+	],
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"ExportHtml",
+		"ReactJS",
+		"Vintage"
+	],
+	"open_files_in_new_window": false,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}
