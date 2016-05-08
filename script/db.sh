@@ -11,6 +11,7 @@ sudo apt-get install -y \
   postgresql
 
 sudo sed -i.bak -e "/^\[mysqld\]$/a table_definition_cache = 400" /etc/mysql/my.cnf
+sudo sed -i.bak -e "/^\[mysqld\]$/a default-time-zone = '+0:00'" /etc/mysql/my.cnf
 sudo service mysql restart
 
 sudo su -c "createuser -s vagrant" postgres
