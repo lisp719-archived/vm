@@ -12,6 +12,7 @@ sudo apt-get install -y \
 
 sudo sed -i.bak -e "/^\[mysqld\]$/a table_definition_cache = 400" /etc/mysql/my.cnf
 sudo sed -i.bak -e "/^\[mysqld\]$/a default-time-zone = '+0:00'" /etc/mysql/my.cnf
+mysql -uroot -proot mysql -e "SET PASSWORD = PASSWORD('')"
 sudo service mysql restart
 
 sudo su -c "createuser -s vagrant" postgres
