@@ -6,7 +6,7 @@ sudo apt-get install -y \
   ttf-mona
 
 sudo apt-get install -y \
-  lxde \
+  lxde
 
 mkdir -p ~/.config/fcitx
 cp ~/linux_files/fcitx.profile ~/.config/fcitx/profile
