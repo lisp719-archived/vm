@@ -2,8 +2,5 @@
     { "keys": ["ctrl+space"], "command": "toggle_mozc" },
     { "keys": ["ctrl+tab"], "command": "next_view" },
     { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
-    {
-        "keys": ["ctrl+;"],
-        "command": "ace_jump_char"
-    }
+    { "keys": ["ctrl+;"], "command": "ace_jump_char" }
 ]
