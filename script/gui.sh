@@ -8,7 +8,10 @@ sudo apt-get install -y \
 sudo apt-get install -y \
   lxde
 
-mkdir -p ~/.config/fcitx
+mkdir -p ~/.config/lxsession/LXDE
+cp ~/linux_files/autostart ~/.config/lxsession/LXDE/
+
+mkdir ~/.config/fcitx
 cp ~/linux_files/fcitx.profile ~/.config/fcitx/profile
 
 wget https://download.sublimetext.com/sublime-text_build-3114_amd64.deb
