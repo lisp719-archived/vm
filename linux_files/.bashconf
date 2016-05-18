@@ -1,3 +1,5 @@
+[[ $TERM != "screen" ]] && exec tmux
+
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/bin/cli:$PATH
 
