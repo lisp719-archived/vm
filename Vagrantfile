@@ -4,19 +4,20 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
   config.vm.synced_folder '../sync', '/vagrant'
-
   config.vm.provider("virtualbox") { |vb| vb.gui = true }
 
-  power_up = -> {
+  main_vm = false
+
+  if main_vm
     config.vm.network "forwarded_port", guest: 3000, host: 3000
     config.vm.network "private_network", ip: "192.168.33.10"
+    config.vm.provider("virtualbox") { |vb| vb.memory = 1024 * 2 }
+  else
+    config.vm.network "private_network", ip: "192.168.33.11"
+    config.vm.provider("virtualbox") { |vb| vb.memory = 1024 * 1 }
+  end
 
-    config.vm.provider("virtualbox") { |vb| vb.memory = 514 * 4 }
-  }
-
-  power_up.()
-
-  config.vm.provision "shell", privileged: false, path: "script/base.sh"
+  # config.vm.provision "shell", privileged: false, path: "script/base.sh"
   # config.vm.provision "shell", privileged: false, path: "script/rbenv.sh"
   # config.vm.provision "shell", privileged: false, path: "script/db.sh"
   # config.vm.provision "shell", privileged: false, path: "script/gui.sh"
