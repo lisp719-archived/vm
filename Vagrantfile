@@ -5,6 +5,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
   config.vm.synced_folder '../sync', '/vagrant'
   config.vm.provider("virtualbox") { |vb| vb.gui = true }
+  config.vm.provider("virtualbox") { |vb| vb.cpus = 2 }
 
   main_vm = false
 
