@@ -5,5 +5,5 @@ export PATH=$HOME/bin/cli:$PATH
 
 export PS1='\u:\w$ '
 
-cdf() { cd $(find . -maxdepth 3 -type d | fzf); }
+cdf() { cd $(find . -maxdepth 3 -type d | grep -v "\/\." | fzf); }
 killf() { kill -9 `ps aux | fzf | awk '{print $2}'`; }
