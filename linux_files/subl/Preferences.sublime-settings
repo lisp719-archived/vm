@@ -11,6 +11,7 @@
 		".DS_Store",
 		"*.cache",
 		"*.log",
+		"*.min.*",
 		"*.pyc",
 		"*.sqlite3"
 	],
@@ -23,6 +24,7 @@
 		".vagrant",
 		"bower_components",
 		"cookbooks",
+		"coverage",
 		"js/compiled",
 		"libmecab-ruby",
 		"node_modules",
@@ -30,6 +32,7 @@
 		"vendor/bundle",
 		"vendor/plugins"
 	],
+	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
