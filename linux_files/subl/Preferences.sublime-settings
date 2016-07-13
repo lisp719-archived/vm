@@ -29,8 +29,7 @@
 		"libmecab-ruby",
 		"node_modules",
 		"tmp",
-		"vendor/bundle",
-		"vendor/plugins"
+		"vendor"
 	],
 	"font_size": 10,
 	"highlight_line": true,
