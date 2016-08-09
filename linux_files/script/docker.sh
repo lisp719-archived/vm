@@ -13,5 +13,4 @@ apt-cache policy docker-engine
 
 sudo apt-get install -y docker-engine
 
-sudo groupadd docker
 sudo usermod -aG docker vagrant
