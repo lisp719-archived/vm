@@ -18,6 +18,11 @@ Vagrant.configure(2) do |config|
     config.vm.provider("virtualbox") { |vb| vb.memory = 1024 * 1 }
   end
 
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+  end
+
   prov = 'linux_files/prov'
   # config.vm.provision "shell", privileged: false, path: "#{prov}/base.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/gui.sh"
