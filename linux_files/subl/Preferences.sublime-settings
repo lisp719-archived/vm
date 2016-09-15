@@ -25,6 +25,8 @@
 		"bower_components",
 		"cookbooks",
 		"coverage",
+		"dist",
+		"elm-stuff",
 		"js/compiled",
 		"libmecab-ruby",
 		"node_modules",
