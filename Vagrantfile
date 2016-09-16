@@ -4,19 +4,19 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
   config.vm.synced_folder '../sync', '/vagrant'
-  config.vm.provider("virtualbox") { |vb| vb.gui = true }
-  config.vm.provider("virtualbox") { |vb| vb.cpus = 2 }
 
-  main_vm = true
+  config.vm.provider("virtualbox") do |vb|
+    vb.gui = true
+    vb.cpus = 2
+    vb.memory = 1024 * 2
+  end
 
-  if main_vm
+  if true
     port_config = -> (port) { config.vm.network "forwarded_port", guest: port, host: port }
     [3000, 8080].each(&port_config)
     config.vm.network "private_network", ip: "192.168.33.10"
-    config.vm.provider("virtualbox") { |vb| vb.memory = 1024 * 2 }
   else
     config.vm.network "private_network", ip: "192.168.33.11"
-    config.vm.provider("virtualbox") { |vb| vb.memory = 1024 * 1 }
   end
 
   config.vm.provider "virtualbox" do |vb|
