@@ -31,4 +31,4 @@ cp ~/linux_files/.bashconf ~/.bashconf
 echo >> ~/.bashrc
 echo '. ~/.bashconf' >> ~/.bashrc
 
-mkdir sandbox
+mkdir ~/sandbox
