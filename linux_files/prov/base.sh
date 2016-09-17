@@ -11,7 +11,7 @@ sudo apt-get install -y \
   tig
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install --all
 
 sudo timedatectl set-timezone Asia/Tokyo
 
