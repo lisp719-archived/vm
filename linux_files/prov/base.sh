@@ -32,3 +32,6 @@ echo >> ~/.bashrc
 echo '. ~/.bashconf' >> ~/.bashrc
 
 mkdir ~/sandbox
+
+mkdir ~/.finish
+touch ~/.finish/base
