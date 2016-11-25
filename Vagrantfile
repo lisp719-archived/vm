@@ -31,4 +31,5 @@ Vagrant.configure(2) do |config|
   # config.vm.provision "shell", privileged: false, path: "#{prov}/node.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/rbenv.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/db.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/redis.sh"
 end
