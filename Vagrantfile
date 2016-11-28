@@ -1,6 +1,5 @@
 Vagrant.configure(2) do |config|
-  config.vm.box = "ubuntu"
-  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.box = "boxcutter/ubuntu1404"
 
   config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
   config.vm.synced_folder '../sync', '/vagrant'
