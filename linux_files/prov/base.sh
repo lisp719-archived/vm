@@ -2,12 +2,10 @@
 
 sudo sed -i.bak -e "s%http://us.archive.ubuntu.com/ubuntu%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive%g" /etc/apt/sources.list
 
-sudo add-apt-repository ppa:git-core/ppa -y
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update
 sudo apt-get install -y \
   git \
   gitk \
-  nodejs \
   tig
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
