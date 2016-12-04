@@ -1,6 +1,6 @@
 #! /bin/sh
 
-sudo dmf install -y \
+sudo dnf install -y \
   git \
   nano \
   tig
