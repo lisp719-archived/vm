@@ -23,7 +23,7 @@ git clone https://lisp719@bitbucket.org/lisp719/cli.git ~/bin/cli
 cp ~/linux_files/.tmux.conf ~/.tmux.conf
 cp ~/linux_files/.bashconf ~/.bashconf
 
-echo >> ~/.bashrc
-echo '. ~/.bashconf' >> ~/.bashrc
+echo >> ~/.bash_profile
+echo '. ~/.bashconf' >> ~/.bash_profile
 
 mkdir ~/sandbox
