@@ -2,10 +2,12 @@
 
 sudo dnf install -y \
   gcc\
+  gcc-c++ \
   bzip2\
   openssl-devel\
   libyaml-devel\
   libffi-devel\
+  libxml2-devel \
   readline-devel\
   zlib-devel\
   gdbm-devel\

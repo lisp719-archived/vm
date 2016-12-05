@@ -2,7 +2,10 @@
 
 sudo dnf install -y \
   mariadb-server \
-  redis
+  mariadb-devel \
+  redis \
+  sqlite \
+  sqlite-devel
 
 sudo systemctl start mariadb
 sudo systemctl start redis
