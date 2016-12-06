@@ -21,8 +21,8 @@ touch ~/.gitignore
 mkdir ~/bin
 git clone https://lisp719@bitbucket.org/lisp719/cli.git ~/bin/cli
 
-cp ~/linux_files/.tmux.conf ~/.tmux.conf
-cp ~/linux_files/.bashconf ~/.bashconf
+cp ~/linux_files/conf/.tmux.conf ~/.tmux.conf
+cp ~/linux_files/conf/.bashconf ~/.bashconf
 
 echo >> ~/.bashrc
 echo '. ~/.bashconf' >> ~/.bashrc

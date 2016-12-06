@@ -11,4 +11,4 @@ sudo dnf install -y \
   xorg-x11-server-utils \
   xorg-x11-server-Xorg
 
-cp ~/linux_files/.xinitrc ~
+cp ~/linux_files/conf/.xinitrc ~
