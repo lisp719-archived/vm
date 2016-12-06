@@ -6,4 +6,6 @@ sudo dnf install -y \
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
+cp ~/linux_files/conf/.spacemacs ~/
+
 emacs --daemon
