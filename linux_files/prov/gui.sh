@@ -2,10 +2,13 @@
 
 sudo dnf install -y \
   lxterminal \
-  openbox \
+  i3 \
   xorg-x11-xinit \
   xorg-x11-drv-evdev \
+  xorg-x11-utils \
   xorg-x11-server-Xorg
+
+cp ~/linux_files/.xinitrc ~
 
 # cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
