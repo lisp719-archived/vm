@@ -8,4 +8,5 @@ export QT_IM_MODULE=ibus
 
 ibus-daemon -drx
 
-exec i3
+tint2 &
+exec openbox
