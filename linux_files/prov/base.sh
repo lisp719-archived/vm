@@ -4,7 +4,8 @@ sudo dnf install -y \
   git \
   nano \
   tig \
-  tmux
+  tmux \
+  tree
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
