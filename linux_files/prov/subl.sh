@@ -12,4 +12,4 @@ wget https://packagecontrol.io/Package%20Control.sublime-package -P ~/.config/su
 
 cp -r ~/linux_files/conf/subl ~/.config/sublime-text-3/Packages
 
-git config --global core.editor "subl -w"
+git config --global core.editor "subl -nw"
