@@ -28,8 +28,8 @@ cp ~/linux_files/conf/.bashconf ~/.bashconf
 echo >> ~/.bashrc
 echo '. ~/.bashconf' >> ~/.bashrc
 
-mkdir ~/sandbox
+mkdir ~/sandbox ~/projects
 
 cd ~/.ssh/
 cp /vagrant/.ssh/* .
-chmod 600 id_rsa
+chmod 600 config id_rsa
