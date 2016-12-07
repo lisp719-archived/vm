@@ -28,3 +28,7 @@ echo >> ~/.bashrc
 echo '. ~/.bashconf' >> ~/.bashrc
 
 mkdir ~/sandbox
+
+cd ~/.ssh/
+cp /vagrant/.ssh/* .
+chmod 600 id_rsa
