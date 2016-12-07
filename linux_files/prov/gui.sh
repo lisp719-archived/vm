@@ -14,3 +14,7 @@ sudo dnf install -y \
   xorg-x11-server-Xorg
 
 cp ~/linux_files/conf/.xinitrc ~
+
+xmodmap -pke > ~/.Xmodmap_default
+echo keycode 102=Super_L > ~/.Xmodmap
+xmodmap ~/.Xmodmap
