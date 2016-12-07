@@ -15,6 +15,5 @@ sudo dnf install -y \
 
 cp ~/linux_files/conf/.xinitrc ~
 
-xmodmap -pke > ~/.Xmodmap_default
-echo keycode 102=Super_L > ~/.Xmodmap
-xmodmap ~/.Xmodmap
+# xmodmap -pke > ~/.Xmodmap_default
+# xmodmap -e "keycode 102=Super_L"
