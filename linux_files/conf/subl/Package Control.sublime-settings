@@ -17,11 +17,6 @@
 		"Rails Developer Snippets",
 		"ReactJS",
 		"RSpec",
-		"SCSS",
-		"SublimeMozcInput"
-	],
-	"repositories":
-	[
-		"https://github.com/yasuyuky/SublimeMozcInput"
+		"SCSS"
 	]
 }
