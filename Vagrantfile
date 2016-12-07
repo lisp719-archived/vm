@@ -27,9 +27,12 @@ Vagrant.configure(2) do |config|
 
   prov = 'linux_files/prov'
   # config.vm.provision "shell", privileged: false, path: "#{prov}/base.sh"
-  # config.vm.provision "shell", privileged: false, path: "#{prov}/gui.sh"
-  # config.vm.provision "shell", privileged: false, path: "#{prov}/ssh.sh"
-  # config.vm.provision "shell", privileged: false, path: "#{prov}/rbenv.sh"
+
   # config.vm.provision "shell", privileged: false, path: "#{prov}/db.sh"
-  # config.vm.provision "shell", privileged: false, path: "#{prov}/redis.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/emacs.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/gui.sh"
+
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/clojure.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/node.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/rbenv.sh"
 end
