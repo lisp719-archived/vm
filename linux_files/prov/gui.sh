@@ -11,7 +11,6 @@ sudo dnf install -y \
   tint2 \
   xorg-x11-xinit \
   xorg-x11-drv-evdev \
-  xorg-x11-server-utils \
-  xorg-x11-server-Xorg
+  xorg-x11-server-Xorg \
 
 cp ~/linux_files/conf/.xinitrc ~
