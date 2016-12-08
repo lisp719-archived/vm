@@ -1,0 +1,8 @@
+[user]
+	name = lisp719
+	email = test@example.com
+[push]
+	default = simple
+[core]
+	editor = nano
+	excludesfile = /home/vagrant/.gitignore
