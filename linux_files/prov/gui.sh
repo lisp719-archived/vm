@@ -1,12 +1,12 @@
 #! /bin/sh
 
 sudo dnf install -y \
-  lxterminal \
   gitk \
   git-gui \
   google-droid-sans-mono-fonts \
   ibus-kkc \
   ipa-gothic-fonts \
+  lxterminal \
   openbox \
   tint2 \
   xorg-x11-xinit \
