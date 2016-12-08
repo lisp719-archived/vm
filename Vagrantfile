@@ -20,10 +20,10 @@ Vagrant.configure(2) do |config|
     config.vm.network "private_network", ip: "192.168.33.11"
   end
 
-  config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
-    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
-  end
+  # config.vm.provider "virtualbox" do |vb|
+  #   vb.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
+  #   vb.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
+  # end
 
   prov = 'linux_files/prov'
   # config.vm.provision "shell", privileged: false, path: "#{prov}/base.sh"
