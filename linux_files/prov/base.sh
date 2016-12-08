@@ -1,5 +1,6 @@
 #! /bin/sh
 
+dnf list | echo
 sudo dnf install -y \
   git \
   nano \
