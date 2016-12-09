@@ -1,5 +1,5 @@
 REM vagrant destroy -f
-REM vagrant up
+REM vagrant up > up.log
 REM vagrant reload
 REM vagrant snapshot save base
 REM vagrant snapshot restore base
