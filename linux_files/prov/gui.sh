@@ -13,5 +13,6 @@ sudo dnf install -y \
   xorg-x11-xinit \
   xorg-x11-drv-evdev \
   xorg-x11-server-Xorg \
+  urw-fonts
 
 cp ~/linux_files/conf/.xinitrc ~
