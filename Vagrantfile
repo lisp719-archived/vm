@@ -4,8 +4,6 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
   config.vm.synced_folder '../sync', '/vagrant'
 
-  config.ssh.insert_key = false
-
   config.vm.provider("virtualbox") do |vb|
     vb.gui = true
     vb.cpus = 2
@@ -20,10 +18,11 @@ Vagrant.configure(2) do |config|
     config.vm.network "private_network", ip: "192.168.33.11"
   end
 
-  # config.vm.provider "virtualbox" do |vb|
-  #   vb.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
-  #   vb.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
-  # end
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--vram", "64"]
+  end
 
   prov = 'linux_files/prov'
   # config.vm.provision "shell", privileged: false, path: "#{prov}/base.sh"
