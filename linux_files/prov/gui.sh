@@ -8,6 +8,7 @@ sudo dnf install -y \
   ipa-gothic-fonts \
   lxterminal \
   openbox \
+  spacefm \
   tint2 \
   xorg-x11-xinit \
   xorg-x11-drv-evdev \
