@@ -1,5 +1,6 @@
 [
-    { "keys": ["ctrl+tab"], "command": "next_view" },
-    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
-    { "keys": ["ctrl+;"], "command": "ace_jump_char" }
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+  { "keys": ["ctrl+;"], "command": "ace_jump_char" },
+  { "keys": ["ctrl+period"], "command": "open_rspec_file", "args": {} }
 ]
