@@ -3,7 +3,9 @@
 dnf list | echo
 sudo dnf install -y \
   git \
+  highlight \
   nano \
+  ranger \
   tig \
   tmux \
   tree
