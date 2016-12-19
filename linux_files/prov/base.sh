@@ -1,6 +1,9 @@
 #! /bin/sh
 
 dnf list | echo
+sudo dnf update -y \
+  vim-minimal
+
 sudo dnf install -y \
   git \
   highlight \
@@ -8,7 +11,8 @@ sudo dnf install -y \
   ranger \
   tig \
   tmux \
-  tree
+  tree \
+  vim
 
 sudo timedatectl set-timezone Asia/Tokyo
 
