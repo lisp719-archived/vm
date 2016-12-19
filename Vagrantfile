@@ -29,6 +29,7 @@ Vagrant.configure(2) do |config|
   # config.vm.provision "shell", privileged: false, path: "#{prov}/base.sh"
 
   # config.vm.provision "shell", privileged: false, path: "#{prov}/db.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/docker.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/emacs.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/gui.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/subl.sh"
