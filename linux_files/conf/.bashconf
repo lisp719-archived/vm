@@ -8,4 +8,11 @@ export TERMINAL=lxterminal
 cdf() { cd $(find . -maxdepth 3 -type d | grep -v "\/\." | fzf); }
 killf() { kill -9 `ps aux | fzf | awk '{print $2}'`; }
 
-alias r=ranger
+r() {
+    if [ -z "$RANGER_LEVEL" ]
+    then
+        ranger
+    else
+        exit
+    fi
+}
