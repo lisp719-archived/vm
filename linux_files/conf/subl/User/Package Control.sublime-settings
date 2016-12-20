@@ -5,12 +5,9 @@
 	],
 	"installed_packages":
 	[
-		"Abacus",
 		"AceJump",
 		"AdvancedNewFile",
 		"Better CoffeeScript",
-		"ExportHtml",
-		"FindKeyConflicts",
 		"Git",
 		"GitGutter",
 		"Package Control",
