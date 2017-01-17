@@ -12,6 +12,7 @@ sudo dnf install -y \
   tig \
   tmux \
   tree \
+  unzip \
   vim
 
 sudo timedatectl set-timezone Asia/Tokyo
