@@ -40,10 +40,13 @@
 	"ignored_packages":
 	[
 		"ExportHtml",
-		"ReactJS",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,
+	"rulers":
+	[
+		120
+	],
 	"show_encoding": true,
 	"show_line_endings": true,
 	"tab_size": 2,
