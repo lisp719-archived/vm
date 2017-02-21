@@ -25,7 +25,6 @@ Vagrant.configure(2) do |config|
   end
 
   prov = 'linux_files/prov'
-  # config.vm.provision "shell", privileged: false, path: "#{prov}/repolist.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/base.sh"
 
   # config.vm.provision "shell", privileged: false, path: "#{prov}/db.sh"
