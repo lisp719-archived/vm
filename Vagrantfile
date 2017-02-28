@@ -1,5 +1,6 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "boxcutter/fedora24"
+  config.vm.box_check_update = false
 
   config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
   config.vm.synced_folder '../sync', '/vagrant'
