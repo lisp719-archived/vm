@@ -39,6 +39,7 @@ Vagrant.configure(2) do |config|
   # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/npm/elm.sh"
 
   # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/clojure.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/gae.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/rbenv.sh"
 
   config.vm.provision "shell", inline: "systemctl restart network", run: "always"

@@ -6,6 +6,7 @@ sudo dnf install -y \
   git \
   highlight \
   nano \
+  python \
   ranger \
   tig \
   tmux \
