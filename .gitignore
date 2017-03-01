@@ -1,2 +1,2 @@
 .vagrant
-up.log
+*.log

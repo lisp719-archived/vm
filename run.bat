@@ -7,6 +7,7 @@ REM vagrant snapshot save base
 REM vagrant snapshot restore base
 REM vagrant snapshot delete base
 REM vagrant snapshot list
+REM vagrant provision > provision.log
 REM vagrant status
 
 time /t
