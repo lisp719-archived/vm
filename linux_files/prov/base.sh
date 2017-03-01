@@ -1,6 +1,7 @@
 #! /bin/sh
 
-sudo dnf update -y
+sudo dnf update -y \
+  vim-minimal
 sudo dnf install -y \
   git \
   highlight \
