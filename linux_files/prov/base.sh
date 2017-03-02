@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -e
+
 sudo dnf update -y \
   vim-minimal
 sudo dnf install -y \
