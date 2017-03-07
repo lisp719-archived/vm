@@ -17,6 +17,7 @@
 	],
 	"folder_exclude_patterns":
 	[
+		".awcache",
 		".bower-cache",
 		".git",
 		".sass-cache",
