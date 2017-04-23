@@ -1,7 +1,7 @@
 time /t
 
 REM vagrant destroy -f
-REM vagrant up --no-provision
+REM vagrant up
 REM timeout 10
 REM vagrant provision > provision.log
 REM vagrant reload
