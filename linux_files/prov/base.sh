@@ -8,6 +8,7 @@ sudo dnf install -y \
   atool \
   git \
   highlight \
+  htop \
   nano \
   python \
   ranger \
