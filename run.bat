@@ -2,9 +2,9 @@ time /t
 
 REM vagrant destroy -f
 REM vagrant up
+REM vagrant reload
 REM timeout 10
 REM vagrant provision > provision.log
-REM vagrant reload
 REM vagrant snapshot save base
 REM vagrant snapshot restore base
 REM vagrant snapshot delete base
