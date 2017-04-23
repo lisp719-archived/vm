@@ -20,4 +20,4 @@ sudo dnf install -y \
 cp ~/linux_files/conf/.xinitrc ~
 
 mkdir -p ~/.config
-mv ~/linux_files/conf/terminator ~/.config
+cp -R ~/linux_files/conf/terminator ~/.config
