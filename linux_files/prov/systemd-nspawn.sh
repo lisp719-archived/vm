@@ -7,5 +7,5 @@ sudo dnf install -y \
   gnupg \
   systemd-container
 
-# sudo debootstrap stable ./my_dc http://ftp.jp.debian.org/debian/
-
+mkdir ~/container
+# sudo debootstrap stable ./debian http://ftp.jp.debian.org/debian/
