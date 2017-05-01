@@ -5,6 +5,7 @@ set -e
 sudo dnf install -y \
   mariadb-server \
   mariadb-devel \
+  postgresql-devel \
   postgresql-server \
   redis \
   sqlite \
