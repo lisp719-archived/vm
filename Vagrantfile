@@ -36,7 +36,7 @@ Vagrant.configure(2) do |config|
   # config.vm.provision "shell", privileged: false, path: "#{prov}/subl.sh"
 
   # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/node.sh"
-  # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/npm/elm.sh"
+  # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/elm.sh"
 
   # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/clojure.sh"
   # config.vm.provision "shell", privileged: false, path: "#{prov}/lang/gae.sh"
