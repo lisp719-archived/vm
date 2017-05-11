@@ -1,0 +1,14 @@
+---
+
+- name: install mongodb
+  dnf:
+    name: "{{ item }}"
+  with_items:
+    - mongodb
+    - mongodb-server
+
+- name: service
+  service:
+    name: mongod
+    state: started
+    enabled: yes
