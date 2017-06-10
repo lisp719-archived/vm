@@ -1,0 +1,16 @@
+{
+  "diffEditor.renderSideBySide": false,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 0,
+  "git.confirmSync": false,
+  "files.exclude": {
+    "**/elm-stuff": true
+  },
+  "elm.formatOnSave": true,
+  "files.insertFinalNewline": true
+}
