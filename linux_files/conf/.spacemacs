@@ -39,7 +39,7 @@ values."
      auto-completion
      ;; better-defaults
      clojure
-     elm
+     (elm :variables elm-format-on-save t)
      emacs-lisp
      git
      helm
