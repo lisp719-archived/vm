@@ -11,3 +11,6 @@ wget https://github.com/LightTable/LightTable/releases/download/0.8.1/lighttable
 atool -x lighttable.tar.gz
 sudo mv lighttable-0.8.1-linux /opt/lighttable
 sudo ln -s /opt/lighttable/light /usr/bin/
+
+# mkdir -p ~/.config/LightTable/User/
+# cp ~/linux_files/conf/light/* ~/.config/LightTable/User/
