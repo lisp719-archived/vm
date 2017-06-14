@@ -19,5 +19,8 @@ sudo dnf install -y \
 
 cp ~/linux_files/conf/.xinitrc ~
 
-mkdir -p ~/.config
-cp -R ~/linux_files/conf/terminator ~/.config
+mkdir -p ~/.config/terminator
+cp ~/linux_files/conf/terminator ~/.config/terminator/config
+
+mkdir -p ~/.config/tint2
+cp ~/linux_files/conf/tint2rc ~/.config/tint2/tint2rc
