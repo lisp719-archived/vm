@@ -11,6 +11,7 @@
  "Paredit" "0.0.4",
  "Python" "0.0.7",
  "Rainbow" "0.0.8",
+ "Whitespace" "0.0.1",
  "elm-light" "0.5.1"},
  :author "TODO",
  :name "User"}

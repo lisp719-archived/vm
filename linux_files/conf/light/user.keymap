@@ -23,6 +23,10 @@
   ;; To subtract a keybinding, prefix the key with '-'  e.g.
   ;;  [:app "-ctrl-shift-d" :docs.search.show]
 
+  [:app "pmeta-o" :open-file]
+  [:app "pmeta-p" :navigate-workspace-transient]
+  [:app "pmeta-shift-p" :show-commandbar-transient]
+
   [:editor "f12" :editor.jump-to-definition-at-cursor]
   [:editor "alt--" :editor.unjump]
   [:editor "alt-d" :editor.doc.toggle]

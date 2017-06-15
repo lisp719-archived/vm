@@ -56,5 +56,5 @@
   [:editor :lt.objs.editor/highlight-current-line]
   [:editor :lt.objs.editor/line-numbers]
   [:editor :lt.objs.editor/wrap]
+  [:editor :lt.plugins.visible-whitespace/show-whitespace]
   ]
-
