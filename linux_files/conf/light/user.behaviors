@@ -52,9 +52,13 @@
 
   [:app :lt.objs.app/run-on-init [:window.maximize]]
   [:app :lt.objs.files/file.ignore-pattern "(^\\..*)|\\.class$|target/|svn|cvs|\\.git|\\.pyc|~|\\.swp|\\.jar|.DS_Store|\\.nrepl-port|elm-stuff/"]
+  [:app :lt.objs.style/font-settings "monospace" "10"]
+
   [:editor :lt.objs.editor/autoclose-brackets]
+  [:editor :lt.objs.editor/fold-gutter]
   [:editor :lt.objs.editor/highlight-current-line]
   [:editor :lt.objs.editor/line-numbers]
   [:editor :lt.objs.editor/wrap]
+
   [:editor :lt.plugins.visible-whitespace/show-whitespace]
   ]
