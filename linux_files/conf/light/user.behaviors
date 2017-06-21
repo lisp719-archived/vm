@@ -61,4 +61,7 @@
   [:editor :lt.objs.editor/wrap]
 
   [:editor :lt.plugins.visible-whitespace/show-whitespace]
+
+  ;; turn off default behaviors
+  [:app :-lt.objs.workspace/reconstitute-last-workspace]
   ]

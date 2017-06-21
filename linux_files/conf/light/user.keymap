@@ -27,6 +27,9 @@
   [:app "pmeta-p" :navigate-workspace-transient]
   [:app "pmeta-shift-p" :show-commandbar-transient]
 
+  [:app "pmeta-k pmeta-b" :workspace.show]
+  [:app "pmeta-k pmeta-h" :toggle-console]
+
   [:editor "f12" :editor.jump-to-definition-at-cursor]
   [:editor "alt--" :editor.unjump]
   [:editor "alt-d" :editor.doc.toggle]
