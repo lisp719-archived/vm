@@ -9,4 +9,4 @@ sudo dnf install -y \
 
 mkdir ~/container
 # sudo debootstrap stable ~/container/debian http://ftp.jp.debian.org/debian/
-# sudo dnf -y --releasever=24 --installroot=~/container/fedora --disablerepo='*' --enablerepo=fedora --enablerepo=updates install systemd passwd dnf fedora-release nano
+# sudo dnf -y --releasever=24 --installroot=$HOME/container/fedora --disablerepo='*' --enablerepo=fedora --enablerepo=updates install systemd passwd dnf fedora-release nano
