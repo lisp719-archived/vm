@@ -15,5 +15,6 @@
     "**/tmp": true
   },
   "elm.formatOnSave": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "workbench.commandPalette.preserveInput": true
 }
