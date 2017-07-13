@@ -26,5 +26,5 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
 
-  # config.vm.provision "shell", inline: "systemctl restart network", run: "always"
+  config.vm.provision "shell", inline: "systemctl restart network", run: "always"
 end
