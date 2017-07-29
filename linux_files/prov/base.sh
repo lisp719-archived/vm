@@ -13,7 +13,6 @@ sudo dnf install -y \
   python \
   ranger \
   tig \
-  tmux \
   tree \
   unzip \
   vim
@@ -30,7 +29,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 touch ~/.gitignore
 cp ~/linux_files/conf/.bashconf ~/.bashconf
 cp ~/linux_files/conf/.gitconfig ~/.gitconfig
-cp ~/linux_files/conf/.tmux.conf ~/.tmux.conf
 
 echo >> ~/.bashrc
 echo '. ~/.bashconf' >> ~/.bashrc
