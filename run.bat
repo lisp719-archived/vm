@@ -1,7 +1,7 @@
 time /t
 
-vagrant destroy -f
-vagrant up
+REM vagrant destroy -f
+REM vagrant up
 REM vagrant reload
 REM timeout 10
 REM vagrant provision
