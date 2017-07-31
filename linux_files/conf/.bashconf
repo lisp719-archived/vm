@@ -4,6 +4,7 @@ export PATH=$HOME/bin/cli:$PATH
 export PS1='\u:\w$ '
 export TERMINAL=terminator
 
+alias dc=docker-compose
 alias r=ranger
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
