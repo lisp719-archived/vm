@@ -27,4 +27,5 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", inline: "systemctl restart network", run: "always"
+  config.vm.provision "shell", inline: "sudo sysctl -w net.ipv4.ip_forward=1", run: "always"
 end
