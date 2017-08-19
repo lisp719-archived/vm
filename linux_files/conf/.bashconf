@@ -6,6 +6,7 @@ export TERMINAL=terminator
 
 alias dc=docker-compose
 alias r=ranger
+alias mine="sudo chown -R $USER:$USER ."
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
 cdf() { cd $(find . -maxdepth 3 -type d | grep -v "\/\." | fzf); }
