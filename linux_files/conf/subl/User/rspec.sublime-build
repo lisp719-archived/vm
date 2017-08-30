@@ -1,5 +1,0 @@
-{
-  "selector": "source.ruby.rspec",
-  "cmd": ["bundle", "exec", "rspec", "$file"],
-  "working_dir": "${folder}"
-}
