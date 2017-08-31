@@ -7,7 +7,7 @@ dnf check-update
 sudo dnf install -y code
 
 mkdir -p ~/.config/Code/User
-cp ~/linux_files/conf/vscode.json ~/.config/Code/User/settings.json
+wget https://bitbucket.org/lisp719/win/raw/master/vscode.json -O ~/.config/Code/User/settings.json
 
 code --install-extension ms-vscode.sublime-keybindings
 code --install-extension sbrink.elm
