@@ -19,6 +19,7 @@ sudo dnf install -y \
 
 cp ~/linux_files/conf/.xinitrc ~
 
+mkdir ~/.config
 cp ~/linux_files/conf/mimeapps.list ~/.config/
 
 mkdir -p ~/.config/terminator
