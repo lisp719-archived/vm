@@ -17,6 +17,8 @@ sudo dnf install -y \
   xorg-x11-server-Xorg \
   urw-fonts
 
+git config --global gui.gcwarning false
+
 cp ~/linux_files/conf/.xinitrc ~
 
 mkdir ~/.config
