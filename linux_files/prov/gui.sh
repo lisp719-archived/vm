@@ -8,6 +8,7 @@ sudo dnf install -y \
   google-droid-sans-mono-fonts \
   ibus-kkc \
   ipa-gothic-fonts \
+  meld \
   openbox \
   spacefm \
   tint2 \
