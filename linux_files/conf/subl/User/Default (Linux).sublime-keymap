@@ -4,5 +4,7 @@
   { "keys": ["ctrl+;"], "command": "ace_jump_char" },
   { "keys": ["ctrl+period"], "command": "open_rspec_file", "args": {} },
   { "keys": ["ctrl+space"], "command": "input_helper" },
-  { "keys": ["ctrl+e"], "command": "rspec_line" }
+  { "keys": ["ctrl+e"], "command": "rspec_line" },
+  { "keys": ["ctrl+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+  { "keys": ["alt+enter"], "command": "send_code" },
 ]
