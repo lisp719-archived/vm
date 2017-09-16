@@ -1,0 +1,10 @@
+{
+  "shell_cmd": "rubocop -a ${file} > /dev/null",
+  "selector": "source.ruby",
+  "variants": [
+    {
+      "name": "bundle",
+      "shell_cmd": "bundle exec rubocop -a ${file} > /dev/null"
+    }
+  ]
+}
