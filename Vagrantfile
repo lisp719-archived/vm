@@ -1,9 +1,11 @@
 Vagrant.configure(2) do |config|
-  config.vm.box = "boxcutter/fedora24"
+  config.vm.box = 'bento_fedora25'
+  config.vm.box_url = 'file:///C:\Users\lisp7\OneDrive\init\bento_fedora25.box'
   config.vm.box_check_update = false
 
-  config.vm.synced_folder './linux_files', '/home/vagrant/linux_files'
-  config.vm.synced_folder '../sync', '/vagrant'
+  config.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
+  config.vm.synced_folder './linux_files', '/home/vagrant/linux_files', type: 'virtualbox'
+  config.vm.synced_folder '../sync', '/vagrant', type: 'virtualbox'
 
   config.vm.provider("virtualbox") do |vb|
     vb.gui = true
@@ -25,7 +27,4 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--vram", "64"]
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
-
-  config.vm.provision "shell", inline: "systemctl restart network", run: "always"
-  config.vm.provision "shell", inline: "sudo sysctl -w net.ipv4.ip_forward=1", run: "always"
 end

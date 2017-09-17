@@ -2,9 +2,6 @@
 
 set -e
 
-sudo lvextend -L 30G /dev/mapper/fedora-root
-sudo xfs_growfs /dev/mapper/fedora-root
-
 sudo dnf update -y \
   vim-minimal
 sudo dnf install -y \
@@ -18,7 +15,8 @@ sudo dnf install -y \
   tig \
   tree \
   unzip \
-  vim
+  vim \
+  wget
 
 sudo timedatectl set-timezone Asia/Tokyo
 
