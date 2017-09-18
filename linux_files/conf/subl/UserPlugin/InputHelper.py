@@ -14,8 +14,9 @@ class InputHelperCommand(sublime_plugin.TextCommand):
             selected = sel
 
         if sublime.platform() == 'linux':
+            current_path = os.path.dirname(os.path.realpath(__file__))
 
-            location = os.path.join(sublime.packages_path(), 'Input', 'lib', 'gui.py')
+            location = os.path.join(current_path, 'lib', 'gui.py')
             args = [location]
 
             proc = subprocess.Popen(args, stdout=subprocess.PIPE)
