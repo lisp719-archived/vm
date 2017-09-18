@@ -2,6 +2,9 @@
 
 set -e
 
+sudo lvextend -L 30G /dev/mapper/fedora-root
+sudo xfs_growfs /dev/mapper/fedora-root
+
 sudo dnf update -y \
   vim-minimal
 sudo dnf install -y \
