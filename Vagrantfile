@@ -1,6 +1,6 @@
 Vagrant.configure(2) do |config|
   config.vm.box = 'boxcutter_fedora25'
-  config.vm.box_url = 'file:///C:\Users\lisp7\OneDrive\init\boxcutter_fedora25.box'
+  config.vm.box_url = File.join('file:///', Dir.home, 'OneDrive', 'init', 'boxcutter_fedora25.box')
   config.vm.box_check_update = false
 
   config.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
