@@ -2,11 +2,11 @@
 
 . /etc/X11/xinit/xinitrc-common
 
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
-ibus-daemon -drx
+fcitx
 
 tint2 &
 exec openbox

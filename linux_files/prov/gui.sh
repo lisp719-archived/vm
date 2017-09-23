@@ -3,10 +3,11 @@
 set -e
 
 sudo dnf install -y \
+  fcitx-kkc \
+  fcitx-configtool \
   gitk \
   git-gui \
   google-droid-sans-mono-fonts \
-  ibus-kkc \
   ipa-gothic-fonts \
   meld \
   openbox \
@@ -22,11 +23,11 @@ git config --global gui.gcwarning false
 
 cp ~/linux_files/conf/.xinitrc ~
 
-mkdir ~/.config
+mkdir -p ~/.config
 cp ~/linux_files/conf/mimeapps.list ~/.config/
 
 mkdir -p ~/.config/terminator
 cp ~/linux_files/conf/terminator ~/.config/terminator/config
 
-mkdir -p ~/.config/tint2
-cp ~/linux_files/conf/tint2rc ~/.config/tint2/tint2rc
+mkdir -p ~/.config/fcitx
+cp ~/linux_files/conf/fcitx/* ~/.config/fcitx/
