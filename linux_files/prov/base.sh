@@ -23,7 +23,7 @@ sudo dnf install -y \
 
 sudo timedatectl set-timezone Asia/Tokyo
 
-mkdir ~/bin ~/sandbox ~/projects
+mkdir ~/bin ~/code
 
 git clone https://lisp719@bitbucket.org/lisp719/cli.git ~/bin/cli
 
