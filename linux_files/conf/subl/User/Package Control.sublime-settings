@@ -9,14 +9,11 @@
 		"AdvancedNewFile",
 		"Babel",
 		"Better CoffeeScript",
-		"Elm Language Support",
 		"GitGutter",
 		"GitSavvy",
-		"lispindent",
 		"Package Control",
 		"RSpec",
 		"SCSS",
-		"TerminalView",
-		"TypeScript"
+		"TerminalView"
 	]
 }

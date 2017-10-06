@@ -1,6 +1,6 @@
 Vagrant.configure(2) do |config|
-  config.vm.box = 'boxcutter_fedora25'
-  config.vm.box_url = File.join('file:///', Dir.home, 'OneDrive', 'init', 'boxcutter_fedora25.box')
+  config.vm.box = 'bento_fedora25'
+  config.vm.box_url = File.join('file:///', Dir.home, 'OneDrive', 'init', 'bento_fedora25.box')
   config.vm.box_check_update = false
 
   config.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
@@ -27,4 +27,6 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--vram", "64"]
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
+
+  config.vm.provision 'shell', run: 'always', inline: 'echo nameserver 8.8.8.8 > /etc/resolv.conf'
 end

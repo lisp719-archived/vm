@@ -9,5 +9,4 @@ alias r=ranger
 alias mine="sudo chown -R $USER:$USER ."
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
-cdf() { cd $(find . -maxdepth 3 -type d 2> /dev/null | grep -v "\/\." | fzf); }
 killf() { kill -9 `ps aux | fzf | awk '{print $2}'`; }
