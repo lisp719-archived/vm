@@ -4,9 +4,9 @@ export PATH=$HOME/bin/cli:$PATH
 export PS1='\u:\w$ '
 export TERMINAL=terminator
 
+alias b=bundle
 alias dc=docker-compose
 alias r=ranger
-alias mine="sudo chown -R $USER:$USER ."
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
 killf() { kill -9 `ps aux | fzf | awk '{print $2}'`; }
