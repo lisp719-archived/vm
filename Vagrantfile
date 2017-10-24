@@ -1,4 +1,5 @@
 Vagrant.configure(2) do |config|
+  # VagrantCloudは速度が安定しないのでOneDrive
   config.vm.box = 'bento_fedora25'
   config.vm.box_url = File.join('file:///', Dir.home, 'OneDrive', 'init', 'bento_fedora25.box')
   config.vm.box_check_update = false
@@ -28,5 +29,6 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
 
+  # 起動のたびにresolv.confが書き換えられるからrun: 'always'
   config.vm.provision 'shell', run: 'always', inline: 'echo nameserver 8.8.8.8 > /etc/resolv.conf'
 end
