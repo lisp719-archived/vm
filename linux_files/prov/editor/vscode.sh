@@ -12,6 +12,5 @@ wget https://bitbucket.org/lisp719/win/raw/master/vscode/locale.json -O ~/.confi
 wget https://bitbucket.org/lisp719/win/raw/master/vscode/settings.json -O ~/.config/Code/User/settings.json
 
 code --install-extension Ionide.Ionide-fsharp
-code --install-extension lucax88x.codeacejumper
 code --install-extension ms-vscode.sublime-keybindings
 code --install-extension sbrink.elm
