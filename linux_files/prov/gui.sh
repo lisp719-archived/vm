@@ -5,6 +5,7 @@ set -e
 sudo dnf install -y \
   fcitx-kkc \
   fcitx-configtool \
+  gdouros-symbola-fonts.noarch \
   gitk \
   git-gui \
   google-droid-sans-mono-fonts \
