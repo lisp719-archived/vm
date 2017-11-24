@@ -37,3 +37,8 @@ cp ~/linux_files/conf/.gitconfig ~/.gitconfig
 
 echo >> ~/.bashrc
 echo '. ~/.bashconf' >> ~/.bashrc
+
+cd /tmp
+wget https://github.com/sharkdp/fd/releases/download/v6.0.0/fd-v6.0.0-x86_64-unknown-linux-gnu.tar.gz
+atool -x fd-v6.0.0-x86_64-unknown-linux-gnu.tar.gz
+mv fd-v6.0.0-x86_64-unknown-linux-gnu/fd ~/bin/
