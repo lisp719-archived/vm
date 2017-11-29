@@ -13,8 +13,8 @@ sudo dnf install -y \
   meld \
   openbox \
   spacefm \
+  tilda \
   tint2 \
-  terminator \
   xorg-x11-xinit \
   xorg-x11-drv-evdev \
   xorg-x11-server-Xorg \
@@ -27,8 +27,8 @@ cp ~/linux_files/conf/.xinitrc ~
 mkdir -p ~/.config
 cp ~/linux_files/conf/mimeapps.list ~/.config/
 
-mkdir -p ~/.config/terminator
-cp ~/linux_files/conf/terminator ~/.config/terminator/config
+mkdir -p ~/.config/tilda
+cp ~/linux_files/conf/tilda ~/.config/tilda/config_0
 
 mkdir -p ~/.config/fcitx
 cp ~/linux_files/conf/fcitx/* ~/.config/fcitx/
