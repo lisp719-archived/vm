@@ -3,6 +3,7 @@
 set -e
 
 sudo dnf install -y \
+  byobu \
   fcitx-kkc \
   fcitx-configtool \
   gdouros-symbola-fonts.noarch \
