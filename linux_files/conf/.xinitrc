@@ -8,5 +8,6 @@ export XMODIFIERS=@im=fcitx
 
 fcitx
 
+tilda &
 tint2 &
 exec openbox
