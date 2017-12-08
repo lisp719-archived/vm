@@ -1,7 +1,9 @@
+. /usr/share/git-core/contrib/completion/git-prompt.sh
+
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/bin/cli:$PATH
 
-export PS1='\u:\w$ '
+export PS1='\u:\w$(__git_ps1)$ '
 export TERMINAL=tilda
 
 export FZF_DEFAULT_COMMAND='fd -t f'
