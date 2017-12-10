@@ -8,3 +8,5 @@
   excludesfile = /home/vagrant/.gitignore
 [alias]
   ch = checkout
+[gui]
+  gcwarning = false
