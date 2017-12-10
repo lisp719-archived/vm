@@ -7,10 +7,12 @@
   editor = nano
   excludesfile = /home/vagrant/.gitignore
 [alias]
+  ame = commit -v --amend
   dt = difftool
   m = merge
   mt = mergetool
   sh = show
+  sync = reset --hard
   t = tag
 [gui]
   gcwarning = false
