@@ -1,3 +1,4 @@
+. /usr/share/bash-completion/completions/git
 . /usr/share/git-core/contrib/completion/git-prompt.sh
 
 export PATH=$HOME/bin:$PATH
