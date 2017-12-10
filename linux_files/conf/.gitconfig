@@ -7,11 +7,29 @@
   editor = nano
   excludesfile = /home/vagrant/.gitignore
 [alias]
+  a = add
   ame = commit -v --amend
+  b = branch
+  bk = branch -f bk
+  c = checkout
+  cl = clean
+  co = commit
+  d = diff
   dt = difftool
+  f = fetch
+  g = gui
+  l = log --graph --decorate --oneline
   m = merge
   mt = mergetool
+  p = pull
+  ps = push
+  r = rebase
+  ra = rebase --abort
+  rc = rebase --continue
+  rs = reset
+  s = status -b -s
   sh = show
+  st = stash
   sync = reset --hard
   t = tag
 [gui]
