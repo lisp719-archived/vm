@@ -1,6 +1,8 @@
 . /usr/share/bash-completion/completions/git
 . /usr/share/git-core/contrib/completion/git-prompt.sh
 
+__git_complete g __git_main
+
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/bin/cli:$PATH
 
@@ -13,6 +15,7 @@ export FZF_ALT_C_COMMAND='fd -t d'
 
 alias b=bundle
 alias dc=docker-compose
+alias g=git
 alias r=ranger
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
