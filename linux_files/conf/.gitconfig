@@ -18,6 +18,7 @@
   dt = difftool
   f = fetch
   g = gui
+  k = !gitk
   l = log --graph --decorate --oneline
   m = merge
   mt = mergetool
