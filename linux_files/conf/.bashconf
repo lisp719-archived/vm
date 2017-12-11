@@ -19,4 +19,3 @@ alias g=git
 alias r=ranger
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
-killf() { kill -9 `ps aux | fzf | awk '{print $2}'`; }
