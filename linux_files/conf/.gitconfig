@@ -26,7 +26,7 @@
   mt = mergetool
   p = pull
   ps = push
-  psc = push origin HEAD
+  psc = push origin -u HEAD
   r = rebase
   ra = rebase --abort
   rc = rebase --continue
