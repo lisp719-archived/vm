@@ -6,6 +6,8 @@ __git_complete g __git_main
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/bin/cli:$PATH
 
+export PROMPT_COMMAND='history -a; history -r'
+
 export PS1='\u:\w$(__git_ps1)$ '
 export TERMINAL=tilda
 
