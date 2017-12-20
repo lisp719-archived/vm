@@ -13,7 +13,6 @@
   bk = branch -f bk
   c = checkout
   cc = !git checkout . && git clean -df
-  cl = clean
   co = commit
   cu = checkout -b current
   d = diff
