@@ -29,7 +29,6 @@
 	r = rebase
 	ra = rebase --abort
 	rc = rebase --continue
-	rs = reset
 	s = status -b -s
 	sh = show
 	st = stash
