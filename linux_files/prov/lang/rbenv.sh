@@ -16,11 +16,11 @@ sudo dnf install -y \
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-echo >> ~/.bashconf
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashconf
-echo 'eval "$(rbenv init -)"' >> ~/.bashconf
+echo >> ~/.bashrc
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-. ~/.bashconf
+. ~/.bashrc
 
 echo install: -N >> ~/.gemrc
 echo update: -N >> ~/.gemrc
