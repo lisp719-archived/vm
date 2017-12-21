@@ -5,7 +5,7 @@
 	default = simple
 [core]
 	editor = nano
-	excludesfile = /home/vagrant/.gitignore
+	excludesfile = ~/.gitignore
 [alias]
 	a = add
 	ame = commit -v --amend
