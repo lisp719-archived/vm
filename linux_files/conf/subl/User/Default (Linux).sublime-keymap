@@ -1,5 +1,5 @@
 [
-  { "keys": ["alt+enter"], "command": "eval" },
+  { "keys": ["ctrl+k", "ctrl+e"], "command": "eval" },
   { "keys": ["alt+j"], "command": "ace_jump_char" },
   { "keys": ["ctrl+tab"], "command": "next_view" },
   { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
