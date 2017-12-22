@@ -4,6 +4,7 @@
 [push]
 	default = simple
 [core]
+	autocrlf = input
 	editor = nano
 	excludesfile = ~/.gitignore
 [alias]
@@ -35,4 +36,5 @@
 	sync = reset --hard
 	t = tag
 [gui]
+	encoding = utf-8
 	gcwarning = false
