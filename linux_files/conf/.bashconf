@@ -3,7 +3,6 @@
 
 __git_complete g __git_main
 
-export PATH=$HOME/bin:$PATH
 export PATH=$HOME/bin/cli:$PATH
 
 export PROMPT_COMMAND='history -a; history -r'
