@@ -1,0 +1,33 @@
+{
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "explorer.openEditors.visible": 0,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 0,
+  "git.confirmSync": false,
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.vagrant": true,
+    "**/dist": true,
+    "**/elm-stuff": true,
+    "**/node_modules": true,
+    "**/target": true,
+    "**/tmp": true
+  },
+  "elm.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "workbench.commandPalette.preserveInput": true,
+  "typescript.check.npmIsInstalled": false,
+  "git.enableSmartCommit": true,
+  "extensions.ignoreRecommendations": true,
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.parameterHints": false,
+  "editor.formatOnSave": true,
+  "git.autofetch": true,
+  "workbench.startupEditor": "newUntitledFile"
+}
