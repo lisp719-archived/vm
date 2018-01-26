@@ -7,33 +7,16 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore
 [alias]
-	a = add
 	ame = commit -v --amend
-	b = branch
 	bk = branch -f bk
-	c = checkout
 	cc = !git checkout . && git clean -df
-	co = commit
 	cu = checkout -b current
-	d = diff
-	dt = difftool
-	f = fetch
-	g = gui
-	k = !gitk
 	l = log --graph --decorate --oneline
-	m = merge
-	mt = mergetool
-	p = pull
-	ps = push
-	psc = push origin -u HEAD
-	r = rebase
-	ra = rebase --abort
-	rc = rebase --continue
+	pushc = push origin -u HEAD
+	rebasea = rebase --abort
+	rebasec = rebase --continue
 	s = status -b -s
-	sh = show
-	st = stash
 	sync = reset --hard
-	t = tag
 [gui]
 	encoding = utf-8
 	gcwarning = false
