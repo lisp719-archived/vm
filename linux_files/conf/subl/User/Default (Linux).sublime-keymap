@@ -6,4 +6,5 @@
   { "keys": ["ctrl+period"], "command": "open_rspec_file", "args": {} },
   { "keys": ["ctrl+space"], "command": "input_helper" },
   { "keys": ["ctrl+e"], "command": "rspec_line" },
+  { "keys": ["ctrl+shift+@"], "command": "terminal_view_open" },
 ]
