@@ -29,5 +29,6 @@
   "editor.parameterHints": false,
   "editor.formatOnSave": true,
   "git.autofetch": true,
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.fontSize": 13
 }
