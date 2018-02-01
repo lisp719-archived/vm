@@ -15,6 +15,7 @@ export FZF_ALT_C_COMMAND='fd -t d'
 alias b=bundle
 alias dc=docker-compose
 alias g=git
+alias loadbh="curl https://gist.githubusercontent.com/lisp719/5aa2e294e5d49616ff662839b47f3f57/raw/ >> ~/.bash_history && history -r ~/.bash_history"
 alias mine="sudo chown -R $USER:$USER"
 alias r=ranger
 
