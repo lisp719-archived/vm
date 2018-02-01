@@ -26,8 +26,6 @@ sudo timedatectl set-timezone Asia/Tokyo
 
 mkdir -p ~/bin ~/code/sandbox
 
-git clone git@bitbucket.org:lisp719/cli.git ~/bin/cli
-
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
