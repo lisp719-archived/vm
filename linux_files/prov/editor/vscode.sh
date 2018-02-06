@@ -9,4 +9,5 @@ sudo dnf install -y code
 mkdir -p ~/.config/Code/User
 cp ~/linux_files/conf/vscode/* ~/.config/Code/User/
 
+code --install-extension esbenp.prettier-vscode
 code --install-extension ms-vscode.sublime-keybindings
