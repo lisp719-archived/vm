@@ -10,4 +10,3 @@ mkdir -p ~/.config/Code/User
 cp ~/linux_files/conf/vscode/* ~/.config/Code/User/
 
 code --install-extension ms-vscode.sublime-keybindings
-code --install-extension sbrink.elm
