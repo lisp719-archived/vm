@@ -6,3 +6,5 @@ set -e
 ~/linux_files/prov/gui.sh
 ~/linux_files/prov/editor/subl.sh
 ~/linux_files/prov/docker.sh
+
+echo success
