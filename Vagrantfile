@@ -1,5 +1,6 @@
 Vagrant.configure(2) do |config|
   # VagrantCloudは速度が安定しないのでOneDrive
+  # 使用しているイメージは bento/fedora-25
   config.vm.box = 'bento_fedora25'
   config.vm.box_url = File.join('file:///', Dir.home, 'OneDrive', 'init', 'bento_fedora25.box')
   config.vm.box_check_update = false
