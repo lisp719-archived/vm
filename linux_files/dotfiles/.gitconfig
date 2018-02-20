@@ -6,6 +6,7 @@
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore
+	editor = subl -w
 [alias]
 	ame = commit -v --amend
 	bk = branch -f bk

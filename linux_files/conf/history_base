@@ -1,6 +1,0 @@
-bundle e rails s -b 0
-bundle e rails c
-bundle e rails g
-bundle e rake db:migrate
-bundle e rake db:test:prepare
-bundle e rspec

@@ -1,20 +1,24 @@
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+
 . /usr/share/bash-completion/completions/git
-. /usr/share/git-core/contrib/completion/git-prompt.sh
+. /usr/share/fzf/key-bindings.bash
+. /usr/share/fzf/completion.bash
+. /usr/share/git/completion/git-prompt.sh
 
 __git_complete g __git_main
 
 export HISTSIZE=2000
+export PATH=$PATH:$HOME/bin
 export PS1='\w$(__git_ps1)$ '
-export TERMINAL=tilda
 
 export FZF_DEFAULT_COMMAND='fd -t f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd -t d'
 
-alias b=bundle
 alias dc=docker-compose
 alias g=git
-alias loadbh="cat ~/linux_files/conf/history_base >> ~/.bash_history && history -r ~/.bash_history"
 alias mine="sudo chown -R $USER:$USER"
 alias r=ranger
 
