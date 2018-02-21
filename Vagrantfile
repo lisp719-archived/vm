@@ -9,10 +9,10 @@ Vagrant.configure(2) do |config|
   config.vm.provider("virtualbox") do |vb|
     vb.gui = true
     vb.cpus = 2
-    vb.memory = 1024 * 1
+    vb.memory = 1024 * 2
   end
 
-  if false
+  if true
     port_config = -> (port) { config.vm.network "forwarded_port", guest: port, host: port }
     [3000, 3001, 3002, 3003, 3449, 8000, 8080].each(&port_config)
   end
