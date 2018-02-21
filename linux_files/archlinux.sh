@@ -34,6 +34,7 @@ sudo pacman -S --noconfirm --needed \
   npm \
   ranger \
   tig \
+  tk \
   tree \
   unzip \
   terminator \
