@@ -304,6 +304,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq require-final-newline t)
   (setq web-mode-markup-indent-offset 2)
   (setq css-indent-offset 2)
   (setq js-indent-level 2)
