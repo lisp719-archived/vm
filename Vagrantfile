@@ -15,6 +15,7 @@ Vagrant.configure(2) do |config|
   if true
     port_config = -> (port) { config.vm.network "forwarded_port", guest: port, host: port }
     [3000, 3001, 3002, 3003, 3449, 8000, 8080].each(&port_config)
+    config.vm.network "private_network", ip: "192.168.33.10"
   end
 
   config.vm.provider "virtualbox" do |vb|
