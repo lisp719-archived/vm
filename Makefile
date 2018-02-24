@@ -1,6 +1,5 @@
 less:
 	less Makefile
-rebuild:
-	vagrant.exe destroy -f
+build:
 	vagrant.exe up
 	vagrant.exe reload
