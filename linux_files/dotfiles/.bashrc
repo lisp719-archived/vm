@@ -23,3 +23,4 @@ alias mine="sudo chown -R $USER:$USER"
 alias r=ranger
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
+vsts() { git clone ssh://lisp719@vs-ssh.visualstudio.com:22/DefaultCollection/_ssh/$1; }
