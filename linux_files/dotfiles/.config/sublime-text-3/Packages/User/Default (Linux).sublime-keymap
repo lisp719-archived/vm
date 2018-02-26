@@ -1,10 +1,8 @@
 [
-  { "keys": ["ctrl+k", "ctrl+e"], "command": "eval" },
   { "keys": ["alt+j"], "command": "ace_jump_char" },
   { "keys": ["ctrl+tab"], "command": "next_view" },
   { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
   { "keys": ["ctrl+period"], "command": "open_rspec_file", "args": {} },
   { "keys": ["ctrl+space"], "command": "input_helper" },
   { "keys": ["ctrl+e"], "command": "rspec_line" },
-  { "keys": ["ctrl+shift+@"], "command": "terminal_view_open" },
 ]
