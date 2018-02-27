@@ -17,6 +17,7 @@
 	],
 	"folder_exclude_patterns":
 	[
+		"__pycache__",
 		".awcache",
 		".bower-cache",
 		".git",
