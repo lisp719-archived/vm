@@ -3,13 +3,11 @@
 alias ls='ls --color=auto'
 
 . /usr/share/bash-completion/completions/git
-. /usr/share/bash-completion/completions/docker-compose
 . /usr/share/fzf/key-bindings.bash
 . /usr/share/fzf/completion.bash
 . /usr/share/git/completion/git-prompt.sh
 
 __git_complete g __git_main
-complete -F _docker_compose dc
 
 export HISTSIZE=2000
 export PATH=$PATH:$HOME/bin
