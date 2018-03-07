@@ -5,7 +5,7 @@ set -e
 # common
 cp -r ~/linux_files/dotfiles/.[!.]* ~
 cp /vagrant/.ssh/* ~/.ssh/ && chmod 600 ~/.ssh/*
-mkdir -p ~/bin ~/code/sandbox
+mkdir -p ~/bin ~/code
 sudo timedatectl set-timezone Asia/Tokyo
 sudo rm /etc/resolv.conf && echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
 
