@@ -53,6 +53,7 @@ yaourt -S --noconfirm --needed \
   sublime-text-dev
 
 # after package
+curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 curl -sL https://raw.github.com/simonwhitaker/gibo/master/gibo -o ~/bin/gibo && chmod +x ~/bin/gibo && ~/bin/gibo -u
 test -d ~/.emacs.d || git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
 sudo npm i -g http-server prettier
