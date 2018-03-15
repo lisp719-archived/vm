@@ -21,6 +21,7 @@
 		".awcache",
 		".bower-cache",
 		".git",
+		".ropeproject",
 		".sass-cache",
 		".tmp",
 		".vagrant",
