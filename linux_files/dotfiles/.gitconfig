@@ -12,7 +12,6 @@
 	bk = branch -f bk
 	cc = !git checkout . && git clean -df
 	cu = checkout -b current
-	dev = checkout -b develop
 	l = log --graph --decorate --oneline
 	pushc = push origin -u HEAD
 	rebasea = rebase --abort
