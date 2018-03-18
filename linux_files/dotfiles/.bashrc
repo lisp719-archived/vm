@@ -20,7 +20,7 @@ export FZF_ALT_C_COMMAND='fd -t d'
 alias dc=docker-compose
 alias g=git
 alias mine="sudo chown -R $USER:$USER"
-alias portainer="docker run --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock --no-auth"
+alias portainer="docker run  -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock --no-auth"
 
 bit() { git clone git@bitbucket.org:lisp719/$1.git; }
 vsts() { git clone ssh://lisp719@vs-ssh.visualstudio.com:22/DefaultCollection/_ssh/$1; }
