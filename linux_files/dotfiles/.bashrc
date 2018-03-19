@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 
 __git_complete g __git_main
 
+export HISTCONTROL=ignoredups
 export HISTSIZE=2000
 export PATH=$PATH:$HOME/bin
 export PS1='\w$(__git_ps1)$ '
