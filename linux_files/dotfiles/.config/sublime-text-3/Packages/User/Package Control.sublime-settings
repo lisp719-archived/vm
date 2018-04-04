@@ -7,10 +7,12 @@
 	[
 		"AceJump",
 		"AdvancedNewFile",
+		"Babel",
 		"Better CoffeeScript",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter",
 		"GitSavvy",
+		"JsPrettier",
 		"LESS",
 		"LSP",
 		"Package Control",
