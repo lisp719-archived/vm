@@ -4,19 +4,7 @@
 		"pyls":
 		{
 			"command": ["docker-compose", "run", "--rm", "app", "pyls"],
-			"enabled": true,
-			"settings":
-			{
-				"pyls":
-				{
-					"plugins":
-					{
-						"pycodestyle": {
-							"ignore": ["E501"]
-						}
-					}
-				}
-			}
+			"enabled": true
 		}
 	}
 }
