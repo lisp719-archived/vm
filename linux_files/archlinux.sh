@@ -50,7 +50,7 @@ sudo pacman -S --noconfirm --needed \
 # other package
 yaourt -Syua
 yaourt -S --noconfirm --needed \
-  sublime-text-dev
+  aur/sublime-text-dev
 
 # after package
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
