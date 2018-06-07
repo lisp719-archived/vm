@@ -11,7 +11,6 @@ sudo rm /etc/resolv.conf && echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
 
 # package
 sudo cp ~/linux_files/mirrorlist /etc/pacman.d/mirrorlist
-type yaourt || echo -e "\n[archlinuxfr]\nSigLevel = Never\nServer = http://repo.archlinux.fr/\$arch" | sudo tee -a /etc/pacman.conf
 sudo pacman -Syyu --noconfirm
 sudo pacman -R --noconfirm virtualbox-guest-utils-nox || :
 sudo pacman -S --noconfirm --needed \
@@ -41,16 +40,12 @@ sudo pacman -S --noconfirm --needed \
   wget \
   vim \
   virtualbox-guest-utils \
-  yaourt \
   adobe-source-code-pro-fonts \
   adobe-source-han-sans-jp-fonts \
-  terminus-font \
-  ttf-symbola
+  noto-fonts-emoji \
+  terminus-font
 
 # other package
-yaourt -Syua
-yaourt -S --noconfirm --needed \
-  aur/sublime-text-dev
 
 # after package
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
