@@ -46,6 +46,9 @@ sudo pacman -S --noconfirm --needed \
   terminus-font
 
 # other package
+type yay || bash -c "cd /tmp; git clone https://aur.archlinux.org/yay-bin.git; cd yay-bin; makepkg -si --noconfirm"
+yay -S --needed --noconfirm \
+  sublime-text-dev
 
 # after package
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
