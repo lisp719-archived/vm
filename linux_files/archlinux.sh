@@ -52,7 +52,7 @@ yay -S --needed --noconfirm \
 
 # after package
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
-curl -sL https://raw.github.com/simonwhitaker/gibo/master/gibo -o ~/bin/gibo && chmod +x ~/bin/gibo && ~/bin/gibo -u
+curl -sL https://raw.github.com/simonwhitaker/gibo/master/gibo -o ~/bin/gibo && chmod +x ~/bin/gibo && ~/bin/gibo update
 test -d ~/.emacs.d || git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
 sudo cp -r  ~/linux_files/system/* /etc/systemd/system/
 sudo npm i -g http-server npm prettier
