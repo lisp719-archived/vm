@@ -23,7 +23,6 @@
   "typescript.check.npmIsInstalled": false,
   "git.enableSmartCommit": true,
   "extensions.ignoreRecommendations": true,
-  "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.parameterHints": false,
