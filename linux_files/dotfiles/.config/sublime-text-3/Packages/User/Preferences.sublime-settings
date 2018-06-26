@@ -35,6 +35,7 @@
 		"libmecab-ruby",
 		"node_modules",
 		"public/packs",
+		"target",
 		"tmp",
 		"vendor"
 	],
