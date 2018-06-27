@@ -3,7 +3,7 @@
 set -e
 
 # common
-cp -r ~/linux_files/dotfiles/.[!.]* ~
+~/linux_files/cp_dotfiles.sh
 cp /vagrant/.ssh/* ~/.ssh/ && chmod 600 ~/.ssh/*
 mkdir -p ~/bin ~/code
 sudo timedatectl set-timezone Asia/Tokyo
