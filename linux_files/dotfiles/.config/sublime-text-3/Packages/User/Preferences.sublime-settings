@@ -10,6 +10,7 @@
 		".gitkeep",
 		".DS_Store",
 		"*.cache",
+		"*.exe",
 		"*.log",
 		"*.min.*",
 		"*.pyc",
