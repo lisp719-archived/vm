@@ -28,9 +28,10 @@ sudo pacman -S --noconfirm --needed \
   fzf \
   git \
   htop \
-  lxde \
+  lxqt \
   meld \
   npm \
+  sddm \
   ranger \
   tig \
   tk \
@@ -57,7 +58,7 @@ test -d ~/.emacs.d || git clone --depth 1 https://github.com/syl20bnr/spacemacs 
 sudo cp -r  ~/linux_files/system/* /etc/systemd/system/
 sudo npm i -g http-server npm prettier
 sudo systemctl enable docker
-sudo systemctl enable lxdm
+sudo systemctl enable sddm
 sudo usermod -aG docker vagrant
 type subl || sudo ln -s /bin/subl3 /bin/subl
 wget https://packagecontrol.io/Package%20Control.sublime-package -qP ~/.config/sublime-text-3/Installed\ Packages/
