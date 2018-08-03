@@ -10,8 +10,8 @@
 [alias]
 	ame = commit -v --amend
 	bk = branch -f bk
-	cc = !git checkout . && git clean -df
 	cu = checkout -b current
+	discard = stash -u
 	l = log --graph --decorate --oneline
 	pushc = push origin -u HEAD
 	rebasea = rebase --abort
