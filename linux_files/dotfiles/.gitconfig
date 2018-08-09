@@ -11,7 +11,7 @@
 	ame = commit -v --amend
 	bk = branch -f bk
 	cu = checkout -b current
-	discard = stash -u
+	discard = stash -k -u
 	l = log --graph --decorate --oneline
 	pushc = push origin -u HEAD
 	rebasea = rebase --abort
