@@ -19,7 +19,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd -t d'
 
 alias dc=docker-compose
-alias dry="docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock moncho/dry"
 alias g=git
 alias mine="sudo chown -R $USER:$USER"
 alias portainer="docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer -H unix:///var/run/docker.sock --no-auth"
