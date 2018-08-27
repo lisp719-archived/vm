@@ -10,6 +10,7 @@
 [alias]
 	ame = commit -v --amend
 	bk = branch -f bk
+	create = !git init && git commit --allow-empty -m init
 	cu = checkout -b current
 	discard = stash -k -u
 	l = log --graph --decorate --oneline
