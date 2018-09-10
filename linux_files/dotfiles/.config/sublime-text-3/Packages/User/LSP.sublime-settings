@@ -3,7 +3,6 @@
 	{
 		"pyls":
 		{
-			"command": ["docker-compose", "run", "app", "pyls"],
 			"enabled": true
 		}
 	}
