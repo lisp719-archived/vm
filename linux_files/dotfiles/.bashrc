@@ -11,7 +11,7 @@ __git_complete g __git_main
 
 export HISTCONTROL=ignoredups
 export HISTSIZE=2000
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:${HOME}/bin:${HOME}/.node_modules/bin
 export PS1='\w$(__git_ps1)$ '
 
 export FZF_DEFAULT_COMMAND='fd -t f'
