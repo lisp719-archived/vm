@@ -31,8 +31,9 @@ sudo pacman -S --noconfirm --needed \
   lxqt \
   meld \
   npm \
-  sddm \
+  python-pipenv \
   ranger \
+  sddm \
   tig \
   tk \
   tree \
