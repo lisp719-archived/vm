@@ -17,7 +17,6 @@
     "**/target": true,
     "**/tmp": true
   },
-  "elm.formatOnSave": true,
   "files.insertFinalNewline": true,
   "workbench.commandPalette.preserveInput": true,
   "typescript.check.npmIsInstalled": false,
@@ -25,7 +24,6 @@
   "extensions.ignoreRecommendations": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
-  "editor.parameterHints": false,
   "editor.formatOnSave": true,
   "git.autofetch": true,
   "workbench.startupEditor": "newUntitledFile",
