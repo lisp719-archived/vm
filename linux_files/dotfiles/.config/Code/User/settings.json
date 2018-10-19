@@ -9,14 +9,14 @@
   "window.zoomLevel": 0,
   "git.confirmSync": false,
   "files.exclude": {
-      "**/.cache": true,
-      "**/.vagrant": true,
-      "**/dist": true,
-      "**/elm-stuff": true,
-      "**/node_modules": true,
-      "**/target": true,
-      "**/tmp": true
-    },
+    "**/.cache": true,
+    "**/.vagrant": true,
+    "**/dist": true,
+    "**/elm-stuff": true,
+    "**/node_modules": true,
+    "**/target": true,
+    "**/tmp": true
+  },
   "files.insertFinalNewline": true,
   "workbench.commandPalette.preserveInput": true,
   "typescript.check.npmIsInstalled": false,
@@ -31,4 +31,3 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "terminal.integrated.rendererType": "dom"
 }
-
