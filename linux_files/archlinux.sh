@@ -30,7 +30,6 @@ sudo pacman -S --noconfirm --needed \
   htop \
   lxqt \
   meld \
-  npm \
   python-pipenv \
   ranger \
   sddm \
@@ -55,12 +54,12 @@ yay -S --needed --noconfirm \
 # after package
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 curl -sL https://raw.github.com/simonwhitaker/gibo/master/gibo -o ~/bin/gibo && chmod +x ~/bin/gibo && ~/bin/gibo update
-npm i -g degit http-server prettier
 test -d ~/.emacs.d || git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
 sudo cp -r  ~/linux_files/system/* /etc/systemd/system/
 sudo systemctl enable docker
 sudo systemctl enable sddm
 sudo usermod -aG docker vagrant
+type n || bash -c "curl -L https://git.io/n-install | bash -s -- -y && . ~/.bashrc && npm i -g degit http-server prettier"
 type subl || sudo ln -s /bin/subl3 /bin/subl
 wget https://packagecontrol.io/Package%20Control.sublime-package -qP ~/.config/sublime-text-3/Installed\ Packages/
 
