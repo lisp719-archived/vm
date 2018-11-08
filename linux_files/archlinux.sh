@@ -50,10 +50,17 @@ sudo pacman -S --noconfirm --needed \
 type yay || bash -c "cd /tmp; git clone https://aur.archlinux.org/yay-bin.git; cd yay-bin; makepkg -si --noconfirm"
 yay -S --needed --noconfirm \
   nvm \
-  sublime-text-dev
+  sublime-text-dev \
+  visual-studio-code-bin
 
 # after package
 . /usr/share/nvm/init-nvm.sh && nvm install --lts && npm i -g http-server prettier
+code --install-extension Angular.ng-template
+code --install-extension esbenp.prettier-vscode
+code --install-extension jpoissonnier.vscode-styled-components
+code --install-extension ms-python.python
+code --install-extension ms-vscode.sublime-keybindings
+code --install-extension octref.vetur
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 curl -sL https://raw.github.com/simonwhitaker/gibo/master/gibo -o ~/bin/gibo && chmod +x ~/bin/gibo && ~/bin/gibo update
 test -d ~/.emacs.d || git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
