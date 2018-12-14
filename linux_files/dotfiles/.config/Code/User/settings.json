@@ -29,5 +29,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontSize": 13,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "terminal.integrated.rendererType": "dom"
+  "terminal.integrated.rendererType": "dom",
+  "window.titleBarStyle": "native"
 }
