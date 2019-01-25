@@ -30,7 +30,6 @@ sudo pacman -S --noconfirm --needed \
   htop \
   lxqt \
   meld \
-  python-pipenv \
   ranger \
   sddm \
   tig \
