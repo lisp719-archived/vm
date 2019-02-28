@@ -30,5 +30,6 @@
   "window.zoomLevel": 0,
   "workbench.commandPalette.preserveInput": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.settings.editor": "json",
   "workbench.startupEditor": "newUntitledFile"
 }
