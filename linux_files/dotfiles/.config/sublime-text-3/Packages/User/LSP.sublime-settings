@@ -1,0 +1,17 @@
+{
+	"clients":
+	{
+		"pyls":
+		{
+			"command":
+			[
+				"docker-compose",
+				"run",
+				"--rm",
+				"app",
+				"pyls"
+			],
+			"enabled": true
+		}
+	}
+}
