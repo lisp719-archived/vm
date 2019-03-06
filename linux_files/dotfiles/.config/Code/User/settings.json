@@ -30,8 +30,9 @@
   "window.titleBarStyle": "native",
   "window.zoomLevel": 0,
   "workbench.commandPalette.preserveInput": true,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.enablePreview": false,
   "workbench.settings.editor": "json",
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "breadcrumbs.enabled": true
 }
 
