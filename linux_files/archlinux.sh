@@ -57,7 +57,6 @@ yay -S --needed --noconfirm \
 code --install-extension Angular.ng-template
 code --install-extension esbenp.prettier-vscode
 code --install-extension jpoissonnier.vscode-styled-components
-code --install-extension ms-python.python
 code --install-extension ms-vscode.sublime-keybindings
 code --install-extension octref.vetur
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
