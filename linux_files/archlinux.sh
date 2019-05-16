@@ -11,6 +11,7 @@ sudo rm /etc/resolv.conf && echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
 
 # package
 sudo cp ~/linux_files/mirrorlist /etc/pacman.d/mirrorlist
+sudo pacman -Sy archlinux-keyring --noconfirm
 sudo pacman -Syyu --noconfirm
 sudo pacman -R --noconfirm virtualbox-guest-utils-nox || :
 sudo pacman -S --noconfirm --needed \
