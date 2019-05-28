@@ -1,7 +1,6 @@
 {
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
-  "editor.hover.enabled": false,
   "editor.insertSpaces": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "all",
