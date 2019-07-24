@@ -21,7 +21,6 @@ sudo pacman -S --noconfirm --needed \
   curl \
   docker \
   docker-compose \
-  emacs \
   fcitx-configtool \
   fcitx-im \
   fcitx-mozc \
@@ -67,7 +66,6 @@ sudo cp -r  ~/linux_files/system/* /etc/systemd/system/
 sudo systemctl enable docker
 sudo systemctl enable sddm
 sudo usermod -aG docker vagrant
-test -d ~/.emacs.d || git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
 type subl || sudo ln -s /bin/subl3 /bin/subl
 wget https://packagecontrol.io/Package%20Control.sublime-package -qP ~/.config/sublime-text-3/Installed\ Packages/
 
