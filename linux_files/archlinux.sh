@@ -56,6 +56,7 @@ yay -S --needed --noconfirm \
 # after package
 . /usr/share/nvm/init-nvm.sh && nvm install --lts && npm i -g http-server npm-check prettier
 code --install-extension Angular.ng-template
+code --install-extension betterthantomorrow.calva
 code --install-extension esbenp.prettier-vscode
 code --install-extension jpoissonnier.vscode-styled-components
 code --install-extension ms-vscode.sublime-keybindings
