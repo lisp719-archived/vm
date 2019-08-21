@@ -11,7 +11,7 @@
 	amend = commit -v --amend
 	bk = branch -f bk
 	create = !git init && git commit --allow-empty -m 'create repo'
-	cu = checkout -b current
+	cu = switch -c current
 	discard = stash -k -u
 	l = log --graph --decorate --oneline
 	no-skip = update-index --no-skip-worktree
