@@ -32,6 +32,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.settings.editor": "json",
   "workbench.startupEditor": "newUntitledFile",
-  "breadcrumbs.enabled": true
+  "breadcrumbs.enabled": true,
+  "explorer.confirmDelete": false
 }
 
