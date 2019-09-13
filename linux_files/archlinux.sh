@@ -28,8 +28,8 @@ sudo pacman -S --noconfirm --needed \
   fzf \
   git \
   htop \
-  lxqt \
   meld \
+  openbox \
   ranger \
   sddm \
   tig \
