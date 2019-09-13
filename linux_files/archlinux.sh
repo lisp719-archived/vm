@@ -37,6 +37,7 @@ sudo pacman -S --noconfirm --needed \
   tree \
   unzip \
   terminator \
+  w3m \
   wget \
   vim \
   virtualbox-guest-utils \
