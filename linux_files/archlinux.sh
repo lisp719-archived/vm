@@ -36,7 +36,7 @@ sudo pacman -S --noconfirm --needed \
   tk \
   tree \
   unzip \
-  terminator \
+  tilda \
   w3m \
   wget \
   vim \
@@ -49,6 +49,7 @@ sudo pacman -S --noconfirm --needed \
 # other package
 type yay || bash -c "cd /tmp; git clone https://aur.archlinux.org/yay-bin.git; cd yay-bin; makepkg -si --noconfirm"
 yay -S --needed --noconfirm \
+  byobu \
   nvm \
   sublime-text-dev \
   visual-studio-code-bin
