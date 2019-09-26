@@ -16,8 +16,6 @@
 	l = log --graph --decorate --oneline
 	no-skip = update-index --no-skip-worktree
 	pushc = push origin -u HEAD
-	rebasea = rebase --abort
-	rebasec = rebase --continue
 	s = status -b -s
 	skip = update-index --skip-worktree
 	sync = reset --hard
