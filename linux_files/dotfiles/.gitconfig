@@ -22,3 +22,4 @@
 [gui]
 	encoding = utf-8
 	gcwarning = false
+	spellingdictionary = none
