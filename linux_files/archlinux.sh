@@ -31,6 +31,7 @@ sudo pacman -S --noconfirm --needed \
   meld \
   openbox \
   ranger \
+  rofi \
   sddm \
   tig \
   tk \
