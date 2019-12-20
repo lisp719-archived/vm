@@ -33,6 +33,8 @@
   "workbench.settings.editor": "json",
   "workbench.startupEditor": "newUntitledFile",
   "breadcrumbs.enabled": true,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "[python]": {
+    "editor.tabSize": 4
+  }
 }
-
