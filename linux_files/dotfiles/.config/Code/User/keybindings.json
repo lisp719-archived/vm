@@ -1,6 +1,1 @@
-[
-  {
-    "key": "ctrl+k ctrl+e",
-    "command": "workbench.action.terminal.runSelectedText"
-  }
-]
+[]
