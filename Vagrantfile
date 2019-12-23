@@ -12,13 +12,11 @@ Vagrant.configure(2) do |config|
     vb.memory = 1024 * 3
   end
 
-  if true
-    port_config = -> (port) { config.vm.network "forwarded_port", guest: port, host: port }
-    [3000, 3035, 8000, 8080].each(&port_config)
-    config.vm.network "private_network", ip: "192.168.33.10"
-  else
-    config.vm.network "private_network", ip: "192.168.33.11"
+  [3000, 3035, 8000, 8080].each do |port|
+    config.vm.network "forwarded_port", guest: port, host: port
   end
+
+  config.vm.network "private_network", ip: "192.168.33.10"
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
