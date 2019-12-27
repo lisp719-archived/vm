@@ -61,6 +61,7 @@ code --install-extension Angular.ng-template
 code --install-extension betterthantomorrow.calva
 code --install-extension blanu.vscode-styled-jsx
 code --install-extension esbenp.prettier-vscode
+code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode.sublime-keybindings
 code --install-extension tranhl.find-then-jump
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
