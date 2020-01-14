@@ -20,6 +20,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd -t d'
 
 alias dc=docker-compose
+alias dtag="docker run --rm goodwithtech/dockertags"
 alias g=git
 alias lzd="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/.lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
 alias mine="sudo chown -R $USER:$USER"
