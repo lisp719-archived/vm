@@ -64,7 +64,6 @@ code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode.sublime-keybindings
 code --install-extension tranhl.find-then-jump
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
-curl -sL https://raw.github.com/simonwhitaker/gibo/master/gibo -o ~/bin/gibo && chmod +x ~/bin/gibo && ~/bin/gibo update
 sudo cp -r  ~/linux_files/system/* /etc/systemd/system/
 sudo systemctl enable docker
 sudo systemctl enable sddm
