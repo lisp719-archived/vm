@@ -1,4 +1,4 @@
-(sleep 0s && fcitx-autostart) &
+(sleep 0s && tilda) &
 (sleep 1s && VBoxClient-all) &
-(sleep 2s && tilda) &
+(sleep 2s && fcitx-autostart) &
 
