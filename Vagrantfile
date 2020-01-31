@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     vb.customize ["modifyvm", :id, "--vram", "64"]
-    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.customize ["modifyvm", :id, "--clipboard-mode", "bidirectional"]
   end
 
   config.vm.provision "shell", privileged: false, inline: '~/linux_files/archlinux.sh'
