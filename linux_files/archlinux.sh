@@ -56,7 +56,7 @@ yay -S --needed --noconfirm \
   visual-studio-code-bin
 
 # after package
-. /usr/share/nvm/init-nvm.sh && nvm install --lts && npm i -g http-server npm-check prettier
+. /usr/share/nvm/init-nvm.sh && nvm install --lts && npm i -g npm-check prettier
 code --install-extension Angular.ng-template
 code --install-extension blanu.vscode-styled-jsx
 code --install-extension esbenp.prettier-vscode
