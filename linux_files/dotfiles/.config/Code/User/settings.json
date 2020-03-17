@@ -1,6 +1,7 @@
 {
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
+  "editor.hover.enabled": false,
   "editor.insertSpaces": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "all",
@@ -24,6 +25,7 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.ignoreMissingGitWarning": true,
   "terminal.integrated.rendererType": "dom",
   "typescript.check.npmIsInstalled": false,
   "window.titleBarStyle": "native",
