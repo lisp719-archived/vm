@@ -39,6 +39,9 @@
   "[python]": {
     "editor.tabSize": 4
   },
+  "[rust]": {
+    "editor.tabSize": 4
+  },
   "remote.containers.defaultExtensions": [
     "esbenp.prettier-vscode",
     "tranhl.find-then-jump"
