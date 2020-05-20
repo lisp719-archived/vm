@@ -26,5 +26,4 @@ alias gibo="docker run --rm -v ~/.gitignore-boilerplates:/root/.gitignore-boiler
 alias lzd="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/.lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
 alias mine="sudo chown -R $USER:$USER"
 alias phs="python -m http.server"
-alias portainer="docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer -H unix:///var/run/docker.sock --no-auth"
 alias r=ranger
