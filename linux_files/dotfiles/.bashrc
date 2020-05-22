@@ -19,11 +19,14 @@ export FZF_DEFAULT_COMMAND='fd -t f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd -t d'
 
+export DOCKER_CONFIG="~/.docker-config"
+
 alias dc=docker-compose
 alias dtag="docker run --rm goodwithtech/dockertags"
 alias g=git
-alias gibo="docker run --rm -v ~/.gitignore-boilerplates:/root/.gitignore-boilerplates simonwhitaker/gibo"
-alias lzd="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/.lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
+alias gibo="docker run --rm -v ${DOCKER_CONFIG}/gitignore-boilerplates:/root/.gitignore-boilerplates simonwhitaker/gibo"
+alias gcloud="docker run -it --rm -v ${DOCKER_CONFIG}/gcloud:/root/.config/gcloud -v `pwd`:$PWD -w $PWD google/cloud-sdk:alpine gcloud"
+alias lzd="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ${DOCKER_CONFIG}/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
 alias mine="sudo chown -R $USER:$USER"
 alias phs="python -m http.server"
 alias r=ranger
