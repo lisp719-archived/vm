@@ -8,7 +8,6 @@
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "files.eol": "\n",
   "files.exclude": {
