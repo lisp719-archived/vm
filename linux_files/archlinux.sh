@@ -11,14 +11,17 @@ sudo rm /etc/resolv.conf && echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
 
 # package
 sudo cp ~/linux_files/mirrorlist /etc/pacman.d/mirrorlist
-sudo pacman -Sy archlinux-keyring --noconfirm
-sudo pacman -Syyu --noconfirm
+sudo pacman-key --refresh-keys
+curl https://pkgbuild.com/~eschwartz/repo/x86_64-extracted/pacman-static -o /tmp/pacman-static
+chmod +x /tmp/pacman-static
+sudo /tmp/pacman-static -Syy
+sudo /tmp/pacman-static -S archlinux-keyring --noconfirm
+sudo /tmp/pacman-static -Syu --noconfirm
 sudo pacman -R --noconfirm virtualbox-guest-utils-nox || :
 sudo pacman -S --noconfirm --needed \
   atool \
   base-devel \
   bash-completion \
-  curl \
   docker \
   docker-compose \
   fcitx-configtool \
