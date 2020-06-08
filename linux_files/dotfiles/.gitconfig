@@ -1,6 +1,8 @@
 [user]
 	name = lisp719
 	email = lisp719@gmail.com
+[pull]
+	rebase = false
 [push]
 	default = simple
 [core]
