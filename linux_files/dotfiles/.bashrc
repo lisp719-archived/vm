@@ -20,6 +20,7 @@ export FZF_ALT_C_COMMAND='fd -t d'
 DOCKER_CONFIG="$HOME/.docker-config"
 
 alias dc=docker-compose
+alias dcy="docker run --rm mogurastore/dcy"
 alias dtag="docker run --rm goodwithtech/dockertags"
 alias g=git
 alias gcloud='docker run -it --rm -v $DOCKER_CONFIG/gcloud:/root/.config/gcloud -v $PWD:$PWD -w $PWD google/cloud-sdk:alpine gcloud'
@@ -27,5 +28,5 @@ alias gibo="docker run --rm -v $DOCKER_CONFIG/gitignore-boilerplates:/root/.giti
 alias ls='ls --color=auto'
 alias lzd="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v $DOCKER_CONFIG/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
 alias mine="sudo chown -R $USER:$USER"
-alias phs="python -m http.server"
+alias hs="python -m http.server"
 alias r=ranger
