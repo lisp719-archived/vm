@@ -33,6 +33,7 @@ sudo pacman -S --noconfirm --needed \
   htop \
   meld \
   openbox \
+  prettier \
   ranger \
   rofi \
   sddm \
@@ -54,12 +55,10 @@ sudo pacman -S --noconfirm --needed \
 type yay || bash -c "cd /tmp; git clone https://aur.archlinux.org/yay-bin.git; cd yay-bin; makepkg -si --noconfirm"
 yay -S --needed --noconfirm \
   byobu \
-  nvm \
   sublime-text-dev \
   visual-studio-code-bin
 
 # after package
-. /usr/share/nvm/init-nvm.sh && nvm install --lts && npm i -g npm-check prettier
 code --install-extension Angular.ng-template
 code --install-extension blanu.vscode-styled-jsx
 code --install-extension esbenp.prettier-vscode
