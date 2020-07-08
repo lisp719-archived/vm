@@ -4,7 +4,6 @@
 . /usr/share/fzf/key-bindings.bash
 . /usr/share/fzf/completion.bash
 . /usr/share/git/completion/git-prompt.sh
-. /usr/share/nvm/init-nvm.sh
 
 __git_complete g __git_main
 
