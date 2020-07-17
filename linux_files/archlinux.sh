@@ -59,8 +59,6 @@ yay -S --needed --noconfirm \
   visual-studio-code-bin
 
 # after package
-code --install-extension Angular.ng-template
-code --install-extension blanu.vscode-styled-jsx
 code --install-extension esbenp.prettier-vscode
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode.sublime-keybindings
