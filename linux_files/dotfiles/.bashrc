@@ -19,6 +19,7 @@ export FZF_ALT_C_COMMAND='fd -t d'
 DOCKER_CONFIG="$HOME/.docker-config"
 
 alias dc=docker-compose
+alias dcx="docker-compose run --rm --service-ports"
 alias dcy="docker run --rm mogurastore/dcy"
 alias dtag="docker run --rm goodwithtech/dockertags"
 alias g=git
