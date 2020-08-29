@@ -3,8 +3,6 @@
 	email = lisp719@gmail.com
 [pull]
 	rebase = false
-[push]
-	default = current
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore
@@ -24,3 +22,7 @@
 	encoding = utf-8
 	gcwarning = false
 	spellingdictionary = none
+[init]
+	defaultBranch = main
+[push]
+	default = current
