@@ -42,5 +42,6 @@ curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 sudo cp -r  ~/linux_files/system/* /etc/systemd/system/
 sudo systemctl enable docker
 sudo usermod -aG docker vagrant
+sudo usermod -aG vboxsf vagrant
 
 echo success
