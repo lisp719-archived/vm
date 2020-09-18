@@ -18,10 +18,6 @@
 	s = status -b -s
 	skip = update-index --skip-worktree
 	sync = reset --hard
-[gui]
-	encoding = utf-8
-	gcwarning = false
-	spellingdictionary = none
 [init]
 	defaultBranch = main
 [push]
