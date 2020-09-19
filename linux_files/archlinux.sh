@@ -27,12 +27,12 @@ sudo pacman -S --noconfirm --needed \
   fzf \
   git \
   htop \
+  nano \
   prettier \
   ranger \
   tig \
   tree \
   unzip \
-  tilda \
   w3m \
   wget \
   vim
@@ -44,7 +44,7 @@ yay -S --needed --noconfirm \
 
 # after package
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
-sudo cp -r  ~/tmp_linux_files/system/* /etc/systemd/system/
+sudo cp -r  ~/tmp_linux_files/systemd/* /etc/systemd/
 sudo systemctl enable docker
 sudo usermod -aG docker vagrant
 sudo usermod -aG vboxsf vagrant

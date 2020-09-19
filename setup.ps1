@@ -38,6 +38,7 @@ Function Modify() {
   VBoxManage modifyvm $vm_name --memory (1024 * 3)
   VBoxManage modifyvm $vm_name --cpus 2
   VBoxManage modifyvm $vm_name --defaultfrontend headless
+  VBoxManage modifyvm $vm_name --nic2 hostonly
 }
 
 # Fetch
