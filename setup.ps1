@@ -5,13 +5,13 @@ $ovf_path = "${box_dir}/box.ovf"
 $vm_name = "foo"
 
 
-Function FetchOvf() {
+Function Fetch() {
   mkdir $box_dir
   Invoke-WebRequest $box_url -o $box_path
   tar -xf $box_path -C $box_dir
 }
 
-Function CreateVm() {
+Function Create() {
   $ovf_file = [xml](Get-Content $ovf_path)
   $vmdk_name = [System.IO.Path]::GetFileNameWithoutExtension($ovf_file.Envelope.References.File.href)
   $vdi_path = "${HOME}/VirtualBox VMs/${vm_name}/${vmdk_name}.vdi"
@@ -23,11 +23,7 @@ Function CreateVm() {
   VBoxManage modifymedium $vdi_path --resize 81920
 }
 
-Function ModifyVm() {
-  VBoxManage modifyvm $vm_name --memory 2048
-  VBoxManage modifyvm $vm_name --cpus 2
-  VBoxManage modifyvm $vm_name --defaultfrontend headless
-
+Function ModifyOnce() {
   VBoxManage modifyvm $vm_name --natpf1 "ssh,tcp,,2222,,22"
   VBoxManage modifyvm $vm_name --natpf1 "tcp3000,tcp,,3000,,3000"
   VBoxManage modifyvm $vm_name --natpf1 "tcp3035,tcp,,3035,,3035"
@@ -38,6 +34,13 @@ Function ModifyVm() {
   VBoxManage sharedfolder add $vm_name --name vagrant --hostpath /sync --automount
 }
 
-FetchOvf
-CreateVm
-ModifyVm
+Function Modify() {
+  VBoxManage modifyvm $vm_name --memory 2048
+  VBoxManage modifyvm $vm_name --cpus 2
+  VBoxManage modifyvm $vm_name --defaultfrontend headless
+}
+
+# Fetch
+# Create
+# ModifyOnce
+Modify
