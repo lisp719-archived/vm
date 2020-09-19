@@ -1,19 +1,20 @@
 $box_url = "https://app.vagrantup.com/archlinux/boxes/archlinux/versions/2020.08.12/providers/virtualbox.box"
-$box_path = "tmp/box.tar"
-$ovf_path = "tmp/box.ovf"
+$box_dir = ".box"
+$box_path = "${box_dir}/box.tar"
+$ovf_path = "${box_dir}/box.ovf"
 $vm_name = "foo"
 
 
 Function FetchOvf() {
-  mkdir tmp
+  mkdir $box_dir
   Invoke-WebRequest $box_url -o $box_path
-  tar -xf $box_path -C tmp
+  tar -xf $box_path -C $box_dir
 }
 
 Function CreateVm() {
   $ovf_file = [xml](Get-Content $ovf_path)
   $vmdk_name = [System.IO.Path]::GetFileNameWithoutExtension($ovf_file.Envelope.References.File.href)
-  $vdi_path = "{0}/VirtualBox VMs/{1}/{2}.vdi" -f $HOME, $vm_name, $vmdk_name
+  $vdi_path = "${HOME}/VirtualBox VMs/${vm_name}/${vmdk_name}.vdi"
   $original_vm_name = $ovf_file.Envelope.VirtualSystem.Machine.name
 
   VBoxManage import $ovf_path --options importtovdi
@@ -37,6 +38,6 @@ Function ModifyVm() {
   VBoxManage sharedfolder add $vm_name --name vagrant --hostpath /sync --automount
 }
 
-# FetchOvf
+FetchOvf
 CreateVm
 ModifyVm
