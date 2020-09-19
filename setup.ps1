@@ -18,7 +18,7 @@ Function Create() {
   $original_vm_name = $ovf_file.Envelope.VirtualSystem.Machine.name
 
   VBoxManage import $ovf_path --options importtovdi
-  vboxmanage modifyvm $original_vm_name --name $vm_name
+  VBoxManage modifyvm $original_vm_name --name $vm_name
 
   VBoxManage modifymedium $vdi_path --resize 81920
 }
