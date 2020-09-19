@@ -31,7 +31,7 @@ Function ModifyOnce() {
   VBoxManage modifyvm $vm_name --natpf1 "tcp8080,tcp,,8080,,8080"
 
   VBoxManage sharedfolder add $vm_name --name linux_files --hostpath ./linux_files --automount
-  VBoxManage sharedfolder add $vm_name --name vagrant --hostpath /sync --automount
+  VBoxManage sharedfolder add $vm_name --name sync --hostpath /sync --automount
 }
 
 Function Modify() {
