@@ -41,7 +41,19 @@ Function Modify() {
   VBoxManage modifyvm $vm_name --nic2 hostonly
 }
 
-# Fetch
-# Create
-# ModifyOnce
-Modify
+if ($Args[0] -eq "fetch") {
+  Fetch
+  Create
+  ModifyOnce
+  Modify
+}
+
+if ($Args[0] -eq "create") {
+  Create
+  ModifyOnce
+  Modify
+}
+
+if ($Args[0] -eq "modify") {
+  Modify
+}
