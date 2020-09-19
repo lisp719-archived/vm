@@ -35,7 +35,7 @@ Function ModifyOnce() {
 }
 
 Function Modify() {
-  VBoxManage modifyvm $vm_name --memory 2048
+  VBoxManage modifyvm $vm_name --memory (1024 * 3)
   VBoxManage modifyvm $vm_name --cpus 2
   VBoxManage modifyvm $vm_name --defaultfrontend headless
 }
