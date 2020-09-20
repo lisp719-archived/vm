@@ -1,10 +1,11 @@
 # Usage
 
 ```
-setup.ps1
+vm.ps1 fetch
+vm.ps1 create
+vm.ps1 start
+Start-Sleep 100
+vm.ps1 ssh
 
-// wait a moment to connect
-ssh vagrant@localhost -p 2222
-
-sudo cat /media/sf_linux_files/archlinux.sh | sh
+sudo cat /media/sf_sync/setup.sh | sh
 ```
