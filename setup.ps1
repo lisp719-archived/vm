@@ -19,16 +19,10 @@ Function Clean() {
 
 Function Create() {
   $ovf_file = [xml](Get-Content $ovf_path)
-  $vmdk_name = [System.IO.Path]::GetFileNameWithoutExtension($ovf_file.Envelope.References.File.href)
-  $vdi_path = "${HOME}/VirtualBox VMs/${vm_name}/${vmdk_name}.vdi"
   $original_vm_name = $ovf_file.Envelope.VirtualSystem.Machine.name
 
   VBoxManage import $ovf_path --options importtovdi
-
-  Start-Sleep 1
-
   VBoxManage modifyvm $original_vm_name --name $vm_name
-  VBoxManage modifymedium $vdi_path --resize 81920
 }
 
 Function ModifyOnce() {
