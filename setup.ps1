@@ -26,10 +26,10 @@ Function Create() {
 
 Function ModifyOnce() {
   VBoxManage modifyvm $vm_name --natpf1 "ssh,tcp,,2222,,22"
-  VBoxManage modifyvm $vm_name --natpf1 "tcp3000,tcp,,3000,,3000"
-  VBoxManage modifyvm $vm_name --natpf1 "tcp3035,tcp,,3035,,3035"
-  VBoxManage modifyvm $vm_name --natpf1 "tcp8000,tcp,,8000,,8000"
-  VBoxManage modifyvm $vm_name --natpf1 "tcp8080,tcp,,8080,,8080"
+
+  @(3000, 3035, 8000, 8080).foreach({
+    VBoxManage modifyvm $vm_name --natpf1 "tcp${PSItem},tcp,,${PSItem},,${PSItem}"
+  })
 
   VBoxManage sharedfolder add $vm_name --name linux_files --hostpath ./linux_files --automount
   VBoxManage sharedfolder add $vm_name --name sync --hostpath /sync --automount
