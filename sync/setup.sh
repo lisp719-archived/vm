@@ -2,20 +2,13 @@
 
 set -e
 
-# mount
-mkdir -p ~/tmp_linux_files ~/tmp_sync
-sudo mount -t vboxsf linux_files ~/tmp_linux_files
-sudo mount -t vboxsf sync ~/tmp_sync
-
-# common
-cp -r ~/tmp_linux_files/dotfiles/.[!.]* ~
-cp ~/tmp_sync/.ssh/* ~/.ssh/ && chmod 600 ~/.ssh/*
-mkdir -p ~/bin ~/code
-sudo timedatectl set-timezone Asia/Tokyo
-sudo rm /etc/resolv.conf && echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
+# cp
+sudo cp -r /media/sf_sync /tmp/
+sudo chown -R $USER:$USER /tmp/sf_sync
+sudo cp -r /tmp/sf_sync/etc/* /etc/
+cp -r /tmp/sf_sync/dotfiles/.[!.]* ~
 
 # package
-sudo cp ~/tmp_linux_files/mirrorlist /etc/pacman.d/mirrorlist
 sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm --needed \
   atool \
@@ -43,15 +36,14 @@ yay -S --needed --noconfirm \
   byobu
 
 # after package
-curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
-sudo cp -r  ~/tmp_linux_files/systemd/* /etc/systemd/
 sudo systemctl enable docker
 sudo usermod -aG docker vagrant
 sudo usermod -aG vboxsf vagrant
+byobu-enable
+curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 
-# umount
-sudo umount ~/tmp_linux_files/
-sudo umount ~/tmp_sync/
-rmdir ~/tmp_linux_files ~/tmp_sync
+# etc
+sudo timedatectl set-timezone Asia/Tokyo
+mkdir -p ~/bin ~/code
 
 echo success
