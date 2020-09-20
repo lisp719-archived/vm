@@ -1,2 +1,3 @@
 .box/
+sync/dotfiles/.ssh/
 *.log

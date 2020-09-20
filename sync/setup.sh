@@ -6,6 +6,7 @@ set -e
 sudo cp -r /media/sf_sync /tmp/
 sudo chown -R $USER:$USER /tmp/sf_sync
 find /tmp/sf_sync/ -type f | xargs chmod 644
+chmod 600 /tmp/sf_sync/dotfiles/.ssh/*
 sudo cp -r /tmp/sf_sync/etc/* /etc/
 cp -r /tmp/sf_sync/dotfiles/.[!.]* ~
 

@@ -45,6 +45,11 @@ if ($Args[0] -eq "fetch") {
   Fetch
 }
 
+if ($Args[0] -eq "copy-key") {
+  mkdir -Force sync/dotfiles/.ssh
+  cp ~/.ssh/* sync/dotfiles/.ssh/
+}
+
 if ($Args[0] -eq "create") {
   Clean
   Create
