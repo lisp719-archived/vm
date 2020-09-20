@@ -4,7 +4,6 @@ $box_path = "${box_dir}/box.tar"
 $ovf_path = "${box_dir}/box.ovf"
 $vm_name = "foo"
 
-
 Function Fetch() {
   mkdir $box_dir
   Invoke-WebRequest $box_url -o $box_path
