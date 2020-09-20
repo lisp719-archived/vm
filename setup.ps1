@@ -11,6 +11,12 @@ Function Fetch() {
   tar -xf $box_path -C $box_dir
 }
 
+Function Clean() {
+  if (Test-path "${HOME}/VirtualBox VMs/${vm_name}/${vmdk_name}") {
+    rm -Recurse "${HOME}/VirtualBox VMs/${vm_name}/${vmdk_name}"
+  }
+}
+
 Function Create() {
   $ovf_file = [xml](Get-Content $ovf_path)
   $vmdk_name = [System.IO.Path]::GetFileNameWithoutExtension($ovf_file.Envelope.References.File.href)
@@ -46,6 +52,7 @@ if ($Args[0] -eq "fetch") {
 }
 
 if ($Args[0] -eq "create") {
+  Clean
   Create
   ModifyOnce
   Modify
