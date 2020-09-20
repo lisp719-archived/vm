@@ -31,8 +31,7 @@ Function ModifyOnce() {
     VBoxManage modifyvm $vm_name --natpf1 "tcp${PSItem},tcp,,${PSItem},,${PSItem}"
   })
 
-  VBoxManage sharedfolder add $vm_name --name linux_files --hostpath ./linux_files --automount
-  VBoxManage sharedfolder add $vm_name --name sync --hostpath /sync --automount
+  VBoxManage sharedfolder add $vm_name --name sync --hostpath ./sync --automount
 }
 
 Function Modify() {
