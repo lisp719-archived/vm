@@ -11,8 +11,8 @@ Function Fetch() {
 }
 
 Function Clean() {
-  if (Test-path "${HOME}/VirtualBox VMs/${vm_name}") {
-    rm -Recurse "${HOME}/VirtualBox VMs/${vm_name}"
+  if (Test-path "~/VirtualBox VMs/${vm_name}") {
+    rm -Recurse "~/VirtualBox VMs/${vm_name}"
   }
 }
 
