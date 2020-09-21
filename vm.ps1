@@ -24,6 +24,13 @@ Function Create() {
   VBoxManage modifyvm $original_vm_name --name $vm_name
 }
 
+Function Resize() {
+  $file = [xml](Get-Content "~/VirtualBox VMs/${vm_name}/${vm_name}.vbox")
+  $uuid = $file.VirtualBox.Machine.MediaRegistry.HardDisks.HardDisk.uuid
+
+  VBoxManage modifymedium $uuid --resize (80 * 1024)
+}
+
 Function ModifyOnce() {
   VBoxManage modifyvm $vm_name --natpf1 "ssh,tcp,,2222,,22"
 
@@ -52,6 +59,7 @@ if ($Args[0] -eq "copy-key") {
 if ($Args[0] -eq "create") {
   Clean
   Create
+  Resize
   ModifyOnce
   Modify
 }
