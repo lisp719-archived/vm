@@ -9,6 +9,7 @@ find /tmp/sf_sync/ -type f | xargs chmod 644
 chmod 600 /tmp/sf_sync/dotfiles/.ssh/*
 sudo cp -r /tmp/sf_sync/etc/* /etc/
 cp -r /tmp/sf_sync/dotfiles/.[!.]* ~
+rm -rf /tmp/sf_sync
 
 # package
 sudo pacman -Syyu --noconfirm
