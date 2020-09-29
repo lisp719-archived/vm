@@ -34,9 +34,11 @@ Function Resize() {
 Function ModifyOnce() {
   VBoxManage modifyvm $vm_name --natpf1 "ssh,tcp,,2222,,22"
 
-  @(2800, 3000, 3035, 3333, 8000, 8080).foreach({
-    VBoxManage modifyvm $vm_name --natpf1 "tcp${PSItem},tcp,,${PSItem},,${PSItem}"
-  })
+  $ports = 2800, 3000, 3035, 3333, 8000, 8080
+
+  foreach ($port in $ports) {
+    VBoxManage modifyvm $vm_name --natpf1 "tcp${port},tcp,,${port},,${port}"
+  }
 
   VBoxManage sharedfolder add $vm_name --name sync --hostpath ./sync --automount
 }
