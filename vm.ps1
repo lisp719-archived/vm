@@ -2,7 +2,7 @@ $box_url = "https://app.vagrantup.com/archlinux/boxes/archlinux/versions/2020.08
 $box_dir = ".box"
 $box_path = "${box_dir}/box.tar"
 $ovf_path = "${box_dir}/box.ovf"
-$vm_name = "foo"
+$vm_name = "vm"
 
 Function Fetch() {
   mkdir $box_dir
