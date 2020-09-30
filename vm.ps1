@@ -1,4 +1,4 @@
-$box_url = "https://app.vagrantup.com/archlinux/boxes/archlinux/versions/2020.08.12/providers/virtualbox.box"
+$box_url = "https://app.vagrantup.com/bento/boxes/ubuntu-20.04/versions/202008.16.0/providers/virtualbox.box"
 $box_dir = ".box"
 $box_path = "${box_dir}/box.tar"
 $ovf_path = "${box_dir}/box.ovf"
@@ -24,13 +24,6 @@ Function Create() {
   VBoxManage modifyvm $original_vm_name --name $vm_name
 }
 
-Function Resize() {
-  $file = [xml](Get-Content "~/VirtualBox VMs/${vm_name}/${vm_name}.vbox")
-  $uuid = $file.VirtualBox.Machine.MediaRegistry.HardDisks.HardDisk.uuid
-
-  VBoxManage modifymedium $uuid --resize (80 * 1024)
-}
-
 Function ModifyOnce() {
   VBoxManage modifyvm $vm_name --natpf1 "ssh,tcp,,2222,,22"
 
@@ -40,7 +33,7 @@ Function ModifyOnce() {
     VBoxManage modifyvm $vm_name --natpf1 "tcp${port},tcp,,${port},,${port}"
   }
 
-  VBoxManage sharedfolder add $vm_name --name sync --hostpath ./sync --automount
+  VBoxManage sharedfolder add $vm_name --name sync --hostpath . --automount
 }
 
 Function Modify() {
@@ -56,7 +49,6 @@ if ($Args[0] -eq "fetch") {
 if ($Args[0] -eq "create") {
   Clean
   Create
-  Resize
   ModifyOnce
   Modify
 }

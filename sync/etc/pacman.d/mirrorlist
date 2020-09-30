@@ -1,6 +1,0 @@
-Server = http://mirrors.cat.net/archlinux/$repo/os/$arch
-Server = https://mirrors.cat.net/archlinux/$repo/os/$arch
-Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch
-Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
-Server = https://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
-Server = https://jpn.mirror.pkgbuild.com/$repo/os/$arch
