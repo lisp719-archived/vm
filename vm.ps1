@@ -49,21 +49,8 @@ Function Modify() {
   VBoxManage modifyvm $vm_name --defaultfrontend headless
 }
 
-Function Start() {
-  VBoxManage startvm $vm_name
-}
-
-Function PowerOff() {
-  VBoxManage controlvm $vm_name poweroff
-}
-
 if ($Args[0] -eq "fetch") {
   Fetch
-}
-
-if ($Args[0] -eq "copy-key") {
-  mkdir -Force sync/dotfiles/.ssh
-  cp ~/.ssh/* sync/dotfiles/.ssh/
 }
 
 if ($Args[0] -eq "create") {
@@ -79,7 +66,7 @@ if ($Args[0] -eq "modify") {
 }
 
 if ($Args[0] -eq "del") {
-  PowerOff
+  VBoxManage controlvm $vm_name poweroff
   VBoxManage unregistervm $vm_name --delete
 }
 
@@ -88,14 +75,5 @@ if ($Args[0] -eq "ssh") {
 }
 
 if ($Args[0] -eq "start") {
-  Start
-}
-
-if ($Args[0] -eq "poweroff") {
-  PowerOff
-}
-
-if ($Args[0] -eq "restart") {
-  PowerOff
-  Start
+  VBoxManage startvm $vm_name
 }
