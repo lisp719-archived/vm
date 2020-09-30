@@ -12,7 +12,7 @@ Function Fetch() {
 
 Function Clean() {
   if (Test-path "~/VirtualBox VMs/${vm_name}") {
-    rm -Recurse "~/VirtualBox VMs/${vm_name}"
+    Remove-Item -Recurse "~/VirtualBox VMs/${vm_name}"
   }
 }
 
