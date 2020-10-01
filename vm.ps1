@@ -62,10 +62,6 @@ if ($Args[0] -eq "del") {
   VBoxManage unregistervm $vm_name --delete
 }
 
-if ($Args[0] -eq "ssh") {
-  ssh vagrant@localhost -p 2222
-}
-
 if ($Args[0] -eq "start") {
   VBoxManage startvm $vm_name
 }
