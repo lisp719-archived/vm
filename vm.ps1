@@ -51,6 +51,7 @@ if ($Args[0] -eq "create") {
   Create
   ModifyOnce
   Modify
+  VBoxManage startvm $vm_name
 }
 
 if ($Args[0] -eq "modify") {
