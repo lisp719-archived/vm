@@ -14,6 +14,5 @@ alias dtag="docker run --rm goodwithtech/dockertags"
 alias gibo="docker run --rm simonwhitaker/gibo"
 alias lzd="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
 
-alias dc=docker-compose
 alias fd=fdfind
 alias mine="sudo chown -R $USER:$USER"
