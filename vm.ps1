@@ -45,24 +45,26 @@ Function Modify() {
 if ($Args[0] -eq "fetch") {
   Fetch
 }
-
-if ($Args[0] -eq "create") {
+elseif ($Args[0] -eq "create") {
   Clean
   Create
   ModifyOnce
   Modify
   VBoxManage startvm $vm_name
 }
-
-if ($Args[0] -eq "modify") {
+elseif ($Args[0] -eq "modify") {
   Modify
 }
-
-if ($Args[0] -eq "del") {
+elseif ($Args[0] -eq "del") {
   VBoxManage controlvm $vm_name poweroff
   VBoxManage unregistervm $vm_name --delete
 }
-
-if ($Args[0] -eq "start") {
+elseif ($Args[0] -eq "start") {
   VBoxManage startvm $vm_name
+}
+elseif ($Args[0] -eq "savestate") {
+  VBoxManage controlvm $vm_name savestate
+}
+elseif ($Args[0] -eq "poweroff") {
+  VBoxManage controlvm $vm_name poweroff
 }
