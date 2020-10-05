@@ -22,9 +22,7 @@ Function Create() {
 
   VBoxManage import $ovf_path --options importtovdi
   VBoxManage modifyvm $original_vm_name --name $vm_name
-}
 
-Function ModifyOnce() {
   VBoxManage modifyvm $vm_name --natpf1 "ssh,tcp,,2222,,22"
 
   $ports = 2800, 3000, 3035, 3333, 8000, 8080
@@ -34,9 +32,7 @@ Function ModifyOnce() {
   }
 
   VBoxManage sharedfolder add $vm_name --name sync --hostpath . --automount
-}
 
-Function Modify() {
   VBoxManage modifyvm $vm_name --memory (1024 * 3)
   VBoxManage modifyvm $vm_name --cpus 2
   VBoxManage modifyvm $vm_name --defaultfrontend headless
@@ -48,12 +44,7 @@ if ($Args[0] -eq "fetch") {
 elseif ($Args[0] -eq "create") {
   Clean
   Create
-  ModifyOnce
-  Modify
   VBoxManage startvm $vm_name
-}
-elseif ($Args[0] -eq "modify") {
-  Modify
 }
 elseif ($Args[0] -eq "del") {
   VBoxManage controlvm $vm_name poweroff
