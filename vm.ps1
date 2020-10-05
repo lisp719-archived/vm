@@ -57,5 +57,6 @@ switch ($Args[0]) {
   }
   "key" {
     Write-Output "lcd ~" "mput .ssh/id_rsa* .ssh/" | sftp $sshHost
+    ssh $sshHost chmod 600 ~/.ssh/*
   }
 }
