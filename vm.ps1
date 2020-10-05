@@ -4,6 +4,8 @@ $box_path = "${box_dir}/box.tar"
 $ovf_path = "${box_dir}/box.ovf"
 $vm_name = "vm"
 
+$sshHost = "vm"
+
 Function Fetch() {
   mkdir $box_dir
   Invoke-WebRequest $box_url -o $box_path
@@ -59,5 +61,8 @@ switch ($Args[0]) {
   }
   "down" {
     VBoxManage controlvm $vm_name poweroff
+  }
+  "key" {
+    Write-Output "lcd ~" "mput .ssh/id_rsa* .ssh/" | sftp $sshHost
   }
 }
