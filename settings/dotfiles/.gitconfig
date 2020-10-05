@@ -1,24 +1,23 @@
-[user]
-	name = lisp719
-	email = lisp719@gmail.com
-[pull]
-	rebase = false
-[core]
-	autocrlf = input
-	excludesfile = ~/.gitignore
-	editor = nano
 [alias]
-	amend = commit -v --amend
-	bk = branch -f bk
-	create = !git init && git commit --allow-empty -m 'create repo'
-	cu = switch -c current
-	discard = stash -k -u
-	l = log --graph --decorate --oneline
-	no-skip = update-index --no-skip-worktree
-	s = status -b -s
-	skip = update-index --skip-worktree
-	sync = reset --hard
+  amend = commit -v --amend
+  bk = branch -f bk
+  create = !git init && git commit --allow-empty -m 'create repo'
+  cu = switch -c current
+  discard = stash -k -u
+  l = log --graph --decorate --oneline
+  no-skip = update-index --no-skip-worktree
+  s = status -b -s
+  skip = update-index --skip-worktree
+  sync = reset --hard
+[core]
+  autocrlf = input
+  excludesfile = ~/.gitignore
 [init]
-	defaultBranch = main
+  defaultBranch = main
+[pull]
+  rebase = false
 [push]
-	default = current
+  default = current
+[user]
+  name = lisp719
+  email = lisp719@gmail.com
