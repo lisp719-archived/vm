@@ -38,24 +38,26 @@ Function Create() {
   VBoxManage modifyvm $vm_name --defaultfrontend headless
 }
 
-if ($Args[0] -eq "fetch") {
-  Fetch
-}
-elseif ($Args[0] -eq "create") {
-  Clean
-  Create
-  VBoxManage startvm $vm_name
-}
-elseif ($Args[0] -eq "del") {
-  VBoxManage controlvm $vm_name poweroff
-  VBoxManage unregistervm $vm_name --delete
-}
-elseif ($Args[0] -eq "up") {
-  VBoxManage startvm $vm_name
-}
-elseif ($Args[0] -eq "stop") {
-  VBoxManage controlvm $vm_name savestate
-}
-elseif ($Args[0] -eq "down") {
-  VBoxManage controlvm $vm_name poweroff
+switch ($Args[0]) {
+  "fetch" {
+    Fetch
+  }
+  "create" {
+    Clean
+    Create
+    VBoxManage startvm $vm_name
+  }
+  "del" {
+    VBoxManage controlvm $vm_name poweroff
+    VBoxManage unregistervm $vm_name --delete
+  }
+  "up" {
+    VBoxManage startvm $vm_name
+  }
+  "stop" {
+    VBoxManage controlvm $vm_name savestate
+  }
+  "down" {
+    VBoxManage controlvm $vm_name poweroff
+  }
 }
