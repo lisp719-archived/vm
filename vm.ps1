@@ -50,12 +50,12 @@ elseif ($Args[0] -eq "del") {
   VBoxManage controlvm $vm_name poweroff
   VBoxManage unregistervm $vm_name --delete
 }
-elseif ($Args[0] -eq "start") {
+elseif ($Args[0] -eq "up") {
   VBoxManage startvm $vm_name
 }
-elseif ($Args[0] -eq "savestate") {
+elseif ($Args[0] -eq "stop") {
   VBoxManage controlvm $vm_name savestate
 }
-elseif ($Args[0] -eq "poweroff") {
+elseif ($Args[0] -eq "down") {
   VBoxManage controlvm $vm_name poweroff
 }
