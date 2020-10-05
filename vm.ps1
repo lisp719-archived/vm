@@ -47,7 +47,7 @@ switch ($Args[0]) {
     Create
     VBoxManage startvm $vm_name
   }
-  "del" {
+  "rm" {
     VBoxManage controlvm $vm_name poweroff
     VBoxManage unregistervm $vm_name --delete
   }
