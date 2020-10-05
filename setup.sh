@@ -6,7 +6,6 @@ set -e
 sudo cp -r /media/sf_sync/settings /tmp/
 sudo chown -R $USER:$USER /tmp/settings
 find /tmp/settings/ -type f | xargs chmod 644
-sudo cp -r /tmp/settings/etc/* /etc/
 cp -r /tmp/settings/dotfiles/.[!.]* ~
 rm -rf /tmp/settings
 
@@ -16,6 +15,10 @@ sudo timedatectl set-timezone Asia/Tokyo
 sudo groupadd docker || :
 sudo usermod -aG docker $USER
 sudo usermod -aG vboxsf $USER
+
+# network
+echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
+sudo sed -i.bak -e 's%http://\S\+%mirror://mirrors.ubuntu.com/mirrors.txt%g' /etc/apt/sources.list
 
 # package
 sudo apt update
