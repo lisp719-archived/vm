@@ -39,7 +39,9 @@ sudo apt install -y \
 sudo snap install docker
 
 # after package
+byobu || :
 byobu-enable
+byobu-disable-prompt
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 
 echo success
