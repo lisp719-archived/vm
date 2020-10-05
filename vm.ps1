@@ -12,12 +12,6 @@ Function Fetch() {
   tar -xf $box_path -C $box_dir
 }
 
-Function Clean() {
-  if (Test-path "~/VirtualBox VMs/${vm_name}") {
-    Remove-Item -Recurse "~/VirtualBox VMs/${vm_name}"
-  }
-}
-
 Function Create() {
   $ovf_file = [xml](Get-Content $ovf_path)
   $original_vm_name = $ovf_file.Envelope.VirtualSystem.Machine.name
@@ -45,7 +39,6 @@ switch ($Args[0]) {
     Fetch
   }
   "create" {
-    Clean
     Create
     VBoxManage startvm $vm_name
   }
