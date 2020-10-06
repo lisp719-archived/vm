@@ -1,16 +1,17 @@
-$boxDir = ".box"
 $vmName = "vm"
 
-Function Fetch() {
-  $url = "https://app.vagrantup.com/bento/boxes/ubuntu-20.04/versions/202008.16.0/providers/virtualbox.box"
+Function Create() {
+  $boxDir = ".box"
   $boxPath = "${boxDir}/box.tar"
 
-  mkdir $boxDir
-  Invoke-WebRequest $url -o $boxPath
-  tar -xf $boxPath -C $boxDir
-}
+  if (!(Test-Path $boxPath)) {
+    $url = "https://app.vagrantup.com/bento/boxes/ubuntu-20.04/versions/202008.16.0/providers/virtualbox.box"
 
-Function Create() {
+    mkdir -Force $boxDir
+    Invoke-WebRequest $url -OutFile $boxPath
+    tar -xf $boxPath -C $boxDir
+  }
+
   $ovfPath = "${boxDir}/box.ovf"
   $ofvFile = [xml](Get-Content $ovfPath)
   $originalName = $ofvFile.Envelope.VirtualSystem.Machine.name
@@ -36,9 +37,6 @@ Function Create() {
 }
 
 switch ($Args[0]) {
-  "fetch" {
-    Fetch
-  }
   "create" {
     Create
   }
