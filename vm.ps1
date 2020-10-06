@@ -4,8 +4,6 @@ $box_path = "${box_dir}/box.tar"
 $ovf_path = "${box_dir}/box.ovf"
 $vm_name = "vm"
 
-$sshHost = "vm"
-
 Function Fetch() {
   mkdir $box_dir
   Invoke-WebRequest $box_url -o $box_path
@@ -55,8 +53,11 @@ switch ($Args[0]) {
   "down" {
     VBoxManage controlvm $vm_name poweroff
   }
-  "key" {
-    Write-Output "lcd ~" "mput .ssh/id_rsa* .ssh/" | sftp $sshHost
-    ssh $sshHost chmod 600 ~/.ssh/*
+  "setup" {
+    $sshHost = "vm"
+
+    ssh $sshHost sudo usermod -aG vboxsf `$USER
+    ssh $sshHost sh /media/sf_sync/setup.sh
+    Write-Output "lcd ~" "mput .ssh/id_rsa* .ssh/" "chmod 600 .ssh/*" | sftp $sshHost
   }
 }

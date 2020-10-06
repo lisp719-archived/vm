@@ -2,20 +2,6 @@
 
 set -e
 
-# cp
-sudo cp -r /media/sf_sync/settings /tmp/
-sudo chown -R $USER:$USER /tmp/settings
-find /tmp/settings/ -type f | xargs chmod 644
-cp -r /tmp/settings/dotfiles/.[!.]* ~
-rm -rf /tmp/settings
-
-# etc
-mkdir -p ~/bin ~/code ~/sandbox
-sudo timedatectl set-timezone Asia/Tokyo
-sudo groupadd docker || :
-sudo usermod -aG docker $USER
-sudo usermod -aG vboxsf $USER
-
 # network
 echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
 sudo sed -i.bak -e 's%http://\S\+%mirror://mirrors.ubuntu.com/mirrors.txt%g' /etc/apt/sources.list
@@ -36,6 +22,10 @@ sudo apt install -y \
   unzip \
   wget \
   vim
+
+# docker
+sudo addgroup --system docker
+sudo adduser $USER docker
 sudo snap install docker
 
 # after package
@@ -43,5 +33,10 @@ byobu || :
 byobu-enable
 byobu-disable-prompt
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
+
+# etc
+cp -r /media/sf_sync/settings/dotfiles/.[!.]* ~
+mkdir -p ~/bin ~/code ~/sandbox
+sudo timedatectl set-timezone Asia/Tokyo
 
 echo success
