@@ -1,8 +1,8 @@
 # Usage
 
 ```
-vbc.ps1 fetch
-vbc.ps1 create
-vbc.ps1 up
-vbc.ps1 setup
+run.ps1 fetch
+run.ps1 create
+run.ps1 up
+run.ps1 setup
 ```
