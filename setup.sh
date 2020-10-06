@@ -4,6 +4,7 @@ set -e
 
 # network
 echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
+echo PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" | sudo tee /etc/environment
 sudo sed -i.bak -e 's%http://\S\+%mirror://mirrors.ubuntu.com/mirrors.txt%g' /etc/apt/sources.list
 
 # package
