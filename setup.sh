@@ -35,7 +35,7 @@ byobu-disable-prompt
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 
 # etc
-cp -r /media/sf_sync/settings/dotfiles/.[!.]* ~
+cp -r /media/sf_sync/dotfiles/.[!.]* ~
 mkdir -p ~/bin ~/code ~/sandbox
 sudo timedatectl set-timezone Asia/Tokyo
 
