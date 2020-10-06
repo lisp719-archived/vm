@@ -31,6 +31,8 @@ Function Create() {
   VBoxManage modifyvm $vmName --memory (1024 * 3)
   VBoxManage modifyvm $vmName --cpus 2
   VBoxManage modifyvm $vmName --defaultfrontend headless
+
+  VBoxManage startvm $vmName
 }
 
 switch ($Args[0]) {
@@ -39,7 +41,6 @@ switch ($Args[0]) {
   }
   "create" {
     Create
-    VBoxManage startvm $vmName
   }
   "rm" {
     VBoxManage controlvm $vmName poweroff
