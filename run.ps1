@@ -52,7 +52,7 @@ chmod 600 .ssh/*
 
 switch ($Args[0]) {
   "init" {
-    Write-Output $sshConfig | Out-File ~/.ssh/config -Encoding utf8 -Append
+    [Text.Encoding]::UTF8.GetBytes($sshConfig) | Add-Content ~/.ssh/config -Encoding Byte
     Invoke-WebRequest "https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant" -OutFile ~/.ssh/vagrant
   }
   "create" {
