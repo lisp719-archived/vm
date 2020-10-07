@@ -29,14 +29,15 @@ sudo addgroup --system docker
 sudo adduser $USER docker
 sudo snap install docker
 
-# after package
+# byobu
 byobu || :
-byobu-enable
+byobu-ctrl-a emacs
 byobu-disable-prompt
-curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
+byobu-enable
 
 # etc
 cp -r /media/sf_sync/dotfiles/.[!.]* ~
+curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
 mkdir -p ~/bin ~/code ~/sandbox
 sudo timedatectl set-timezone Asia/Tokyo
 
