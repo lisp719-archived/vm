@@ -1,5 +1,0 @@
-[
-  { "keys": ["alt+j"], "command": "ace_jump_char" },
-  { "keys": ["ctrl+period"], "command": "open_rspec_file", "args": {} },
-  { "keys": ["ctrl+e"], "command": "rspec_line" },
-]
