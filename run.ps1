@@ -36,7 +36,25 @@ Function Create() {
   VBoxManage startvm $vmName
 }
 
+$sshConfig = @'
+Host vm
+  HostName 127.0.0.1
+  Port 2222
+  User vagrant
+  IdentityFile ~/.ssh/vagrant
+'@
+
+$sftpTask = @'
+lcd ~
+mput .ssh/id_rsa* .ssh/
+chmod 600 .ssh/*
+'@
+
 switch ($Args[0]) {
+  "init" {
+    Write-Output $sshConfig >> ~/.ssh/config
+    Invoke-WebRequest "https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant" -OutFile ~/.ssh/vagrant
+  }
   "create" {
     Create
   }
@@ -58,6 +76,6 @@ switch ($Args[0]) {
 
     ssh $sshHost sudo usermod -aG vboxsf `$USER
     ssh $sshHost sh /media/sf_sync/setup.sh
-    Write-Output "lcd ~" "mput .ssh/id_rsa* .ssh/" "chmod 600 .ssh/*" | sftp $sshHost
+    Write-Output $sftpTask | sftp $sshHost
   }
 }
