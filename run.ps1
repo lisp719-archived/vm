@@ -1,11 +1,21 @@
-$vmName = "vm"
+$config = @{
+  VmName = "vm"
+  Box    = @{
+    Org     = "bento"
+    Name    = "ubuntu-20.04"
+    Version = "202008.16.0"
+  }
+  Ports  = 2800, 3000, 3035, 3333, 8000, 8080
+  Cpus   = 2
+  Memory = 1024 * 3
+}
 
 Function Create() {
   $boxDir = ".box"
   $boxPath = "${boxDir}/box.tar"
 
   if (!(Test-Path $boxPath)) {
-    $url = "https://app.vagrantup.com/bento/boxes/ubuntu-20.04/versions/202008.16.0/providers/virtualbox.box"
+    $url = "https://app.vagrantup.com/{0}/boxes/{1}/versions/{2}/providers/virtualbox.box" -f $config.Box.Org, $config.Box.Name, $config.Box.Version
 
     mkdir -Force $boxDir
     Invoke-WebRequest $url -OutFile $boxPath
@@ -17,23 +27,21 @@ Function Create() {
   $originalName = $ovfFile.Envelope.VirtualSystem.Machine.name
 
   VBoxManage import $ovfPath --options importtovdi
-  VBoxManage modifyvm $originalName --name $vmName
+  VBoxManage modifyvm $originalName --name $config.VmName
 
-  VBoxManage modifyvm $vmName --natpf1 "ssh,tcp,,2222,,22"
+  VBoxManage modifyvm $config.VmName --natpf1 "ssh,tcp,,2222,,22"
 
-  $ports = 2800, 3000, 3035, 3333, 8000, 8080
-
-  foreach ($port in $ports) {
-    VBoxManage modifyvm $vmName --natpf1 "tcp${port},tcp,,${port},,${port}"
+  foreach ($port in $config.Ports) {
+    VBoxManage modifyvm $config.VmName --natpf1 "tcp${port},tcp,,${port},,${port}"
   }
 
-  VBoxManage sharedfolder add $vmName --name sync --hostpath . --automount
+  VBoxManage sharedfolder add $config.VmName --name sync --hostpath . --automount
 
-  VBoxManage modifyvm $vmName --memory (1024 * 3)
-  VBoxManage modifyvm $vmName --cpus 2
-  VBoxManage modifyvm $vmName --defaultfrontend headless
+  VBoxManage modifyvm $config.VmName --memory $config.Memory
+  VBoxManage modifyvm $config.VmName --cpus $config.Cpus
+  VBoxManage modifyvm $config.VmName --defaultfrontend headless
 
-  VBoxManage startvm $vmName
+  VBoxManage startvm $config.VmName
 }
 
 $sshConfig = @'
@@ -59,17 +67,17 @@ switch ($Args[0]) {
     Create
   }
   "rm" {
-    VBoxManage controlvm $vmName poweroff
-    VBoxManage unregistervm $vmName --delete
+    VBoxManage controlvm $config.VmName poweroff
+    VBoxManage unregistervm $config.VmName --delete
   }
   "up" {
-    VBoxManage startvm $vmName
+    VBoxManage startvm $config.VmName
   }
   "stop" {
-    VBoxManage controlvm $vmName savestate
+    VBoxManage controlvm $config.VmName savestate
   }
   "down" {
-    VBoxManage controlvm $vmName poweroff
+    VBoxManage controlvm $config.VmName poweroff
   }
   "setup" {
     $sshHost = "vm"
