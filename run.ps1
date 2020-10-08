@@ -86,4 +86,7 @@ switch ($Args[0]) {
     ssh $sshHost sh /media/sf_sync/setup.sh
     Write-Output $sftpTask | sftp $sshHost
   }
+  "target" {
+    Write-Output $config.VmName
+  }
 }
