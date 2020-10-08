@@ -13,8 +13,8 @@ Function Create() {
   }
 
   $ovfPath = "${boxDir}/box.ovf"
-  $ofvFile = [xml](Get-Content $ovfPath)
-  $originalName = $ofvFile.Envelope.VirtualSystem.Machine.name
+  $ovfFile = [xml](Get-Content $ovfPath)
+  $originalName = $ovfFile.Envelope.VirtualSystem.Machine.name
 
   VBoxManage import $ovfPath --options importtovdi
   VBoxManage modifyvm $originalName --name $vmName
