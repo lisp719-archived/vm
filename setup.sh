@@ -22,6 +22,7 @@ sudo apt install -y \
   tig \
   unzip \
   wget \
+  w3m \
   vim
 
 # docker
