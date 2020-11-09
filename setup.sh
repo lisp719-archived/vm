@@ -8,6 +8,7 @@ echo PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/gam
 sudo sed -i.bak -e 's%http://\S\+%mirror://mirrors.ubuntu.com/mirrors.txt%g' /etc/apt/sources.list
 
 # package
+sudo add-apt-repository -y ppa:git-core/ppa
 sudo apt update
 sudo apt install -y \
   atool \
