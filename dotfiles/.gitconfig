@@ -2,7 +2,8 @@
   amend = commit -v --amend
   bk = branch -f bk
   create = !git init && git commit --allow-empty -m 'create repo'
-  cu = switch -c current
+  # switch -cだと補完が一部効かなくなるのでcheckoutを使う
+  cu = checkout --no-track -b current
   discard = stash -k -u
   l = log --graph --decorate --oneline
   no-skip = update-index --no-skip-worktree
