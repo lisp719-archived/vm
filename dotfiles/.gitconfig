@@ -4,7 +4,6 @@
   create = !git init && git commit --allow-empty -m 'create repo'
   # switch -cだと補完が一部効かなくなるのでcheckoutを使う
   cu = checkout --no-track -b current
-  discard = stash -k -u
   l = log --graph --decorate --oneline
   no-skip = update-index --no-skip-worktree
   s = status -b -s
