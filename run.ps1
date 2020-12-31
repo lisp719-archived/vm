@@ -69,6 +69,12 @@ switch ($Args[0]) {
   "rm" {
     VBoxManage controlvm $config.VmName poweroff
     VBoxManage unregistervm $config.VmName --delete
+
+    $vmDir = "~/VirtualBox VMs/$($config.VmName)"
+
+    if (Test-Path $vmDir) {
+      Remove-Item $vmDir
+    }
   }
   "up" {
     VBoxManage startvm $config.VmName
