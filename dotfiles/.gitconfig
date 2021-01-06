@@ -1,7 +1,6 @@
 [alias]
   amend = commit -v --amend
   bk = branch -f bk
-  create = !git init && git commit --allow-empty -m 'create repo'
   # switch -cだと補完が一部効かなくなるのでcheckoutを使う
   cu = checkout --no-track -b current
   l = log --graph --decorate --oneline
