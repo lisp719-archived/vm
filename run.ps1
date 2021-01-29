@@ -83,7 +83,7 @@ switch ($Args[0]) {
     VBoxManage controlvm $config.VmName savestate
   }
   "down" {
-    VBoxManage controlvm $config.VmName poweroff
+    VBoxManage controlvm $config.VmName acpipowerbutton
   }
   "setup" {
     $sshHost = "vm"
