@@ -83,7 +83,7 @@ switch ($Args[0]) {
     VBoxManage controlvm $config.VmName savestate
   }
   "down" {
-    VBoxManage controlvm $config.VmName poweroff
+    VBoxManage controlvm $config.VmName acpipowerbutton
   }
   "setup" {
     $sshHost = "vm"
@@ -91,6 +91,9 @@ switch ($Args[0]) {
     ssh $sshHost sudo usermod -aG vboxsf `$USER
     ssh $sshHost sh /media/sf_sync/setup.sh
     Write-Output $sftpTask | sftp $sshHost
+  }
+  "status" {
+    VBoxManage.exe showvminfo $config.VmName --machinereadable | Select-String "VMState="
   }
   "target" {
     Write-Output $config.VmName
