@@ -40,7 +40,7 @@ byobu-enable
 # etc
 cp -r /media/sf_sync/dotfiles/.[!.]* ~
 curl 'http://vim-bootstrap.com/generate.vim' -d 'editor=vim' > ~/.vimrc
-mkdir -p ~/bin ~/code ~/sandbox
+mkdir -p ~/bin ~/sandbox  ~/workspace
 sudo timedatectl set-timezone Asia/Tokyo
 
 echo success
