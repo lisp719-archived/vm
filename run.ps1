@@ -5,7 +5,22 @@ $config = @{
     Name    = "ubuntu-20.04"
     Version = "202008.16.0"
   }
-  Ports  = 2800, 3000, 3035, 3333, 8000, 8080
+  Ports  = (
+    2800,
+    3000,
+    3035,
+    3333,
+    4000,
+    4200,
+    5000,
+    5001,
+    6000,
+    8000,
+    8080,
+    8085,
+    8888,
+    9099
+  )
   Cpus   = 2
   Memory = 1024 * 3
 }
@@ -44,6 +59,11 @@ Function Create() {
   VBoxManage startvm $config.VmName
 }
 
+function Modify() {
+  VBoxManage modifyvm $config.VmName --memory $config.Memory
+  VBoxManage modifyvm $config.VmName --cpus $config.Cpus
+}
+
 $sshConfig = @'
 Host vm
   HostName 127.0.0.1
@@ -59,12 +79,23 @@ chmod 600 .ssh/*
 '@
 
 switch ($Args[0]) {
+  "create" {
+    Create
+  }
+  "down" {
+    VBoxManage controlvm $config.VmName acpipowerbutton
+  }
   "init" {
     [Text.Encoding]::UTF8.GetBytes($sshConfig) | Add-Content ~/.ssh/config -Encoding Byte
     Invoke-WebRequest "https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant" -OutFile ~/.ssh/vagrant
   }
-  "create" {
-    Create
+  "modify" {
+    Modify
+  }
+  "port" {
+    foreach ($port in $config.Ports) {
+      VBoxManage modifyvm $config.VmName --natpf1 "tcp${port},tcp,,${port},,${port}"
+    }
   }
   "rm" {
     VBoxManage controlvm $config.VmName poweroff
@@ -76,15 +107,6 @@ switch ($Args[0]) {
       Remove-Item $vmDir
     }
   }
-  "up" {
-    VBoxManage startvm $config.VmName
-  }
-  "stop" {
-    VBoxManage controlvm $config.VmName savestate
-  }
-  "down" {
-    VBoxManage controlvm $config.VmName acpipowerbutton
-  }
   "setup" {
     $sshHost = "vm"
 
@@ -95,7 +117,13 @@ switch ($Args[0]) {
   "status" {
     VBoxManage.exe showvminfo $config.VmName --machinereadable | Select-String "VMState="
   }
+  "stop" {
+    VBoxManage controlvm $config.VmName savestate
+  }
   "target" {
     Write-Output $config.VmName
+  }
+  "up" {
+    VBoxManage startvm $config.VmName
   }
 }
