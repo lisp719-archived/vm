@@ -44,6 +44,11 @@ Function Create() {
   VBoxManage startvm $config.VmName
 }
 
+function Modify() {
+  VBoxManage modifyvm $config.VmName --memory $config.Memory
+  VBoxManage modifyvm $config.VmName --cpus $config.Cpus
+}
+
 $sshConfig = @'
 Host vm
   HostName 127.0.0.1
@@ -68,6 +73,9 @@ switch ($Args[0]) {
   "init" {
     [Text.Encoding]::UTF8.GetBytes($sshConfig) | Add-Content ~/.ssh/config -Encoding Byte
     Invoke-WebRequest "https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant" -OutFile ~/.ssh/vagrant
+  }
+  "modify" {
+    Modify
   }
   "rm" {
     VBoxManage controlvm $config.VmName poweroff
