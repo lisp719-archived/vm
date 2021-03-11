@@ -59,12 +59,15 @@ chmod 600 .ssh/*
 '@
 
 switch ($Args[0]) {
+  "create" {
+    Create
+  }
+  "down" {
+    VBoxManage controlvm $config.VmName acpipowerbutton
+  }
   "init" {
     [Text.Encoding]::UTF8.GetBytes($sshConfig) | Add-Content ~/.ssh/config -Encoding Byte
     Invoke-WebRequest "https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant" -OutFile ~/.ssh/vagrant
-  }
-  "create" {
-    Create
   }
   "rm" {
     VBoxManage controlvm $config.VmName poweroff
@@ -76,15 +79,6 @@ switch ($Args[0]) {
       Remove-Item $vmDir
     }
   }
-  "up" {
-    VBoxManage startvm $config.VmName
-  }
-  "stop" {
-    VBoxManage controlvm $config.VmName savestate
-  }
-  "down" {
-    VBoxManage controlvm $config.VmName acpipowerbutton
-  }
   "setup" {
     $sshHost = "vm"
 
@@ -95,7 +89,13 @@ switch ($Args[0]) {
   "status" {
     VBoxManage.exe showvminfo $config.VmName --machinereadable | Select-String "VMState="
   }
+  "stop" {
+    VBoxManage controlvm $config.VmName savestate
+  }
   "target" {
     Write-Output $config.VmName
+  }
+  "up" {
+    VBoxManage startvm $config.VmName
   }
 }
