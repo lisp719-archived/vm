@@ -5,7 +5,22 @@ $config = @{
     Name    = "ubuntu-20.04"
     Version = "202008.16.0"
   }
-  Ports  = 2800, 3000, 3035, 3333, 8000, 8080
+  Ports  = (
+    2800,
+    3000,
+    3035,
+    3333,
+    4000,
+    4200,
+    5000,
+    5001,
+    6000,
+    8000,
+    8080,
+    8085,
+    8888,
+    9099
+  )
   Cpus   = 2
   Memory = 1024 * 3
 }
@@ -76,6 +91,11 @@ switch ($Args[0]) {
   }
   "modify" {
     Modify
+  }
+  "port" {
+    foreach ($port in $config.Ports) {
+      VBoxManage modifyvm $config.VmName --natpf1 "tcp${port},tcp,,${port},,${port}"
+    }
   }
   "rm" {
     VBoxManage controlvm $config.VmName poweroff
