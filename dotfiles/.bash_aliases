@@ -15,4 +15,5 @@ alias gibo="docker run --rm simonwhitaker/gibo"
 alias lzd="docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ~/.lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker"
 
 alias fd=fdfind
+alias fig=docker-compose
 alias mine="sudo chown -R $USER:$USER"
