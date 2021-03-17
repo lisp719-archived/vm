@@ -86,7 +86,7 @@ switch ($Args[0]) {
     VBoxManage controlvm $config.VmName acpipowerbutton
   }
   "init" {
-    [Text.Encoding]::UTF8.GetBytes($sshConfig) | Add-Content ~/.ssh/config -Encoding Byte
+    Write-Output $sshConfig >> ~/.ssh/config
     Invoke-WebRequest "https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant" -OutFile ~/.ssh/vagrant
   }
   "modify" {
