@@ -22,7 +22,7 @@ $config = @{
     9099
   )
   Cpus   = 2
-  Memory = 1024 * 3
+  Memory = 1024 * 4
 }
 
 Function Create() {
