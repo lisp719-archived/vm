@@ -70,6 +70,7 @@ Host vm
   Port 2222
   User vagrant
   IdentityFile ~/.ssh/vagrant
+  ForwardAgent yes
 '@
 
 $sftpTask = @'
